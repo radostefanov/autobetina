@@ -26,6 +26,38 @@ export const serviceGuides = {
   }
 };
 export const regionGuides = {
+  razliv: {
+    bg: {
+      title: 'Пътна помощ Разлив и района | Бетина 97',
+      heading: 'Пътна помощ в Разлив и района',
+      description: 'Автомобилът ви е аварирал в Разлив или наблизо? Денонощна връзка с Бетина 97 за репатрак и пътна помощ в района на Правец: 0878 558 152.',
+      intro: 'Автомобилът ви е аварирал в Разлив или на път наблизо? Обадете се на Бетина 97 от Ботевград, за да уточним нужната помощ, цената и възможното време за посещение. Разлив е в община Правец; наличността се потвърждава по телефон.',
+      heading2: 'Къде около Разлив е автомобилът?',
+      text: 'Уточнете дали сте на улица в селото, на паркинг или на път извън него. Ако се движите към Ботевград или Правец, посочете посоката и видим ориентир. Ако всъщност сте на АМ „Хемус“, съобщете магистралата, километъра и посоката — името на близко село не е достатъчно за точна локация.',
+      prepare: ['Разлив, община Правец, и улица, ориентир или GPS точка.', 'Пътят и посоката на движение, ако сте извън селото.', 'Каква е повредата, марка и модел на автомобила и достъпът до него.', 'Желан сервиз или адрес, ако е необходим превоз.'],
+      focus: ['tow', 'tire', 'battery'],
+      faq: [
+        ['Трябва ли да знам точния адрес около Разлив?', 'Не е задължително да знаете адрес, но трябва да уточним мястото. Споделете GPS точка през картата или опишете пътя, посоката и най-близкия видим ориентир.'],
+        ['Колко време отнема посещението до Разлив?', 'Възможното време се уточнява по телефон според точната локация, достъпа, трафика и текущата наличност. Обадете се директно при спешна заявка.'],
+        ['Може ли превоз до избран от мен сервиз?', 'При заявка за репатрак посочете сервиза или адреса. Обсъждаме маршрута, условията за товарене и цената преди посещението.']
+      ]
+    },
+    en: {
+      title: 'Roadside Assistance Near Razliv | Betina 97',
+      heading: 'Roadside assistance near Razliv',
+      description: 'Car broken down in or near Razliv? Contact Betina 97 24/7 for towing and roadside help in the Pravets area. Confirm availability: +359 878 558 152.',
+      intro: 'Car broken down in Razliv or on a nearby road? Call Betina 97, based in Botevgrad, to discuss the help you need, the price and a possible arrival time. Razliv is in Pravets municipality; availability is confirmed by phone.',
+      heading2: 'Where near Razliv is your vehicle?',
+      text: 'Tell us whether you are on a village street, in a parking area or on a road outside Razliv. If travelling towards Botevgrad or Pravets, give the direction and a visible landmark. If you are actually on the Hemus motorway, give the motorway name, kilometer marker and direction — naming a nearby village does not pinpoint the vehicle.',
+      prepare: ['Razliv, Pravets municipality, plus a street, landmark or GPS point.', 'Road name and travel direction if outside the village.', 'The problem, vehicle make and model, and access to the vehicle.', 'Your chosen workshop or address if transport is needed.'],
+      focus: ['tow', 'tire', 'battery'],
+      faq: [
+        ['Do I need an exact address near Razliv?', 'You do not have to know an address, but we need to identify the location. Share a GPS point through the map or describe the road, travel direction and nearest visible landmark.'],
+        ['How long does attendance near Razliv take?', 'A possible arrival time is discussed by phone based on the exact location, access, traffic and current availability. Call directly for urgent requests.'],
+        ['Can my vehicle be taken to my chosen workshop?', 'Include the workshop or address in your towing request. We discuss the route, loading conditions and price before attending.']
+      ]
+    }
+  },
   botevgrad: {
     bg: { heading: 'Пътна помощ в Ботевград', description: 'Денонощна пътна помощ и репатрак в Ботевград от Бетина 97. Уточнете превоз до сервиз, спукана гума или помощ при стартиране: 0878 558 152.', intro: 'Ботевград е базовият район на Бетина 97. Ако автомобилът ви е аварирал в града, посочете улица, адрес или ясен ориентир, за да уточним достъпа и нужната помощ.', heading2: 'От градски адрес до избрания сервиз', text: 'При повреда на адрес, паркинг или в близост до града уточнете дали има ограничения за достъп и дали автомобилът може да бъде преместен. За репатриране посочете избрания сервиз или място за разтоварване още при разговора.', prepare: ['Улица, адрес или ориентир в Ботевград.', 'Достъп до паркинга и състояние на автомобила.', 'Адрес на сервиза или крайна точка за превоз.'], focus: ['tow','tire','battery'] },
     en: { heading: 'Roadside assistance in Botevgrad', description: '24/7 roadside help and towing in Botevgrad from Betina 97. Discuss workshop transport, flat tire or starting assistance: +359 878 558 152.', intro: 'Botevgrad is Betina 97’s base service area. If your vehicle has broken down in town, provide a street, address or clear landmark so we can discuss access and the help needed.', heading2: 'From a town address to your chosen workshop', text: 'For a breakdown at an address, car park or near town, explain any access restrictions and whether the vehicle can be moved. For towing, give your chosen workshop or unloading point when you call.', prepare: ['Street, address or landmark in Botevgrad.', 'Car park access and the condition of the vehicle.', 'Workshop address or final transport destination.'], focus: ['tow','tire','battery'] }

@@ -1,3 +1,5 @@
+import { mapLocations } from './places.mjs';
+
 // Shared content for static pages and homepage interactions.
 export const copy = {
   "bg": {
@@ -14,6 +16,7 @@ export const copy = {
     "heroEyebrow": "ПЪТНА ПОМОЩ. ПО ВСЯКО ВРЕМЕ.",
     "heroLine1": "Пътна помощ.",
     "usefulPages": "Полезни страници",
+    "locationDirectory": "Търси населено място или район",
     "brandHome": "Бетина 97 — начало",
     "areasNavigation": "Услуги и райони",
     "heroLine2": "Не сте ",
@@ -207,6 +210,7 @@ export const copy = {
     "heroEyebrow": "ROADSIDE ASSISTANCE. AROUND THE CLOCK.",
     "heroLine1": "Roadside help.",
     "usefulPages": "Useful pages",
+    "locationDirectory": "Find a place or area",
     "brandHome": "Betina 97 — home",
     "areasNavigation": "Services and areas",
     "heroLine2": "By your ",
@@ -620,6 +624,9 @@ export const regions = [
     }
   }
 ];
+
+// Named places extracted from the same approximate polygon as the coverage map.
+export const locations = mapLocations;
 
 export const faqs = {
   "bg": [

@@ -1,4 +1,5 @@
-import { copy, services, regions, faqs, paths, homeMeta } from './content/site-data.mjs';
+import { coverageBoundary } from './content/coverage-area.mjs';
+import { copy, services, regions, locations, faqs, paths, homeMeta } from './content/site-data.mjs';
 
 /* Static website: request details stay in memory; the visitor sends the SMS. */
 (() => {
@@ -7,6 +8,7 @@ import { copy, services, regions, faqs, paths, homeMeta } from './content/site-d
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
   const phone = '+359878558152';
+  const coveragePlaces = [...regions, ...locations];
   let lang = document.documentElement.lang === 'en' ? 'en' : 'bg';
   const state = { service: 'tow', step: 1, map: null, selectedPoint: null, requestPoint: null, requestLocationText: '', activeRegion: 0, markers: [], userMarker: null, message: '', toastTimer: null, locationRequest: 0, dialogKind: null };
   const t = key => copy[lang][key] ?? copy.bg[key] ?? key;
@@ -48,7 +50,7 @@ import { copy, services, regions, faqs, paths, homeMeta } from './content/site-d
     [['og:title', homeMeta[lang].title], ['og:description', homeMeta[lang].description], ['og:url', 'https://auto-betina.com' + paths.home[lang]], ['og:locale', lang === 'bg' ? 'bg_BG' : 'en_GB']].forEach(([key, value]) => { const meta = document.querySelector('meta[property="' + key + '"]'); if (meta) meta.content = value; });
     [['twitter:title', homeMeta[lang].title], ['twitter:description', homeMeta[lang].description]].forEach(([key, value]) => { const meta = document.querySelector('meta[name="' + key + '"]'); if (meta) meta.content = value; });
     document.querySelectorAll('[data-path-key]').forEach(link => { link.href = paths[link.dataset.pathKey][lang]; });
-    document.querySelectorAll('[data-region-link]').forEach(link => { const region = regions.find(r => r.id === link.dataset.regionLink); if (region) { link.href = region.paths[lang]; const label = link.querySelector('[data-region-name]'); if (label) label.textContent = lang === 'bg' ? 'Пътна помощ ' + region.bg : 'Roadside assistance ' + region.en; } });
+    document.querySelectorAll('[data-region-link]').forEach(link => { const region = coveragePlaces.find(r => r.id === link.dataset.regionLink); if (region) { link.href = region.paths[lang]; const label = link.querySelector('[data-region-name]'); if (label) label.textContent = lang === 'bg' ? 'Пътна помощ ' + region.bg : 'Roadside assistance ' + region.en; } });
     document.querySelectorAll('[data-service-link]').forEach(link => { const service = services.find(s => s.id === link.dataset.serviceLink); if (service) { link.href = service.paths[lang]; link.textContent = service[lang].title; } });
     document.querySelectorAll('[data-home-anchor]').forEach(link => { link.href = paths.home[lang] + '#' + link.dataset.homeAnchor; });
     document.querySelectorAll('a[href="/#quote"], a[href="/en/#quote"]').forEach(link => { link.href = paths.home[lang] + '#quote'; });
@@ -219,7 +221,7 @@ import { copy, services, regions, faqs, paths, homeMeta } from './content/site-d
     layer.on('tileload', () => { loadedTiles++; $('#map-fallback').hidden = true; });
     layer.on('tileerror', () => { failedTiles++; if (failedTiles > 3 && loadedTiles === 0) $('#map-fallback').hidden = false; });
     layer.addTo(state.map);
-    L.polygon([[43.18, 23.65], [43.19, 23.79], [42.99, 24.0], [42.85, 24.0], [42.77, 23.7], [42.93, 23.61]], { color: '#bd9508', weight: 1.5, dashArray: '5 6', fillColor: '#f5c518', fillOpacity: .1, interactive: false }).addTo(state.map);
+    L.polygon(coverageBoundary, { color: '#bd9508', weight: 1.5, dashArray: '5 6', fillColor: '#f5c518', fillOpacity: .1, interactive: false }).addTo(state.map);
     const markerIcon = L.divIcon({ className: '', html: '<div class="region-marker"></div>', iconSize: [20, 20], iconAnchor: [10, 10] });
     state.markers = regions.map(region => L.marker(region.point, { icon: markerIcon }).addTo(state.map));
     renderRegions();
@@ -332,7 +334,7 @@ import { copy, services, regions, faqs, paths, homeMeta } from './content/site-d
   setLanguage(lang);
   const requestParams = new URLSearchParams(location.search);
   selectService(requestParams.get('service') || 'tow');
-  const requestedRegion = regions.find(region => region.id === requestParams.get('region'));
+  const requestedRegion = coveragePlaces.find(region => region.id === requestParams.get('region'));
   if (requestedRegion) $('#request-location').value = requestedRegion[lang];
   setStep(1, false);
   if ('IntersectionObserver' in window) {

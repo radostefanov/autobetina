@@ -1,0 +1,3449 @@
+{
+  "fetchedAt": "2026-10-03T13:04:21.117Z",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:80];(nwr[place~\"^(city|town|village|hamlet|suburb|neighbourhood|locality)$\"][name](poly:\"43.18 23.65 43.19 23.79 42.99 24 42.85 24 42.77 23.7 42.93 23.61\");node[highway=motorway_junction][name](poly:\"43.18 23.65 43.19 23.79 42.99 24 42.85 24 42.77 23.7 42.93 23.61\");way[highway][tunnel=yes][name](poly:\"43.18 23.65 43.19 23.79 42.99 24 42.85 24 42.77 23.7 42.93 23.61\"););out center tags;",
+  "boundary": [
+    [
+      43.18,
+      23.65
+    ],
+    [
+      43.19,
+      23.79
+    ],
+    [
+      42.99,
+      24
+    ],
+    [
+      42.85,
+      24
+    ],
+    [
+      42.77,
+      23.7
+    ],
+    [
+      42.93,
+      23.61
+    ]
+  ],
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-03T13:03:06Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 125330822,
+      "lat": 42.9097518,
+      "lon": 23.8871261,
+      "tags": {
+        "highway": "motorway_junction",
+        "name": "Правец",
+        "name:en": "Pravets",
+        "ref": "53"
+      }
+    },
+    {
+      "type": "node",
+      "id": 183122953,
+      "lat": 42.9362276,
+      "lon": 23.9680964,
+      "tags": {
+        "highway": "motorway_junction",
+        "name": "Осиковска Лакавица",
+        "name:en": "Osikovska Lakavitsa",
+        "ref": "60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273488721,
+      "lat": 43.1432643,
+      "lon": 23.7152641,
+      "tags": {
+        "ekatte": "47714",
+        "int_name": "Mezdra",
+        "name": "Мездра",
+        "name:bg": "Мездра",
+        "name:en": "Mezdra",
+        "place": "town",
+        "population": "10670",
+        "source": "bgtopomaps",
+        "wikidata": "Q406500"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273488848,
+      "lat": 42.9078544,
+      "lon": 23.7929451,
+      "tags": {
+        "ekatte": "05815",
+        "int_name": "Botevgrad",
+        "name": "Ботевград",
+        "name:de": "Botewgrad",
+        "name:en": "Botevgrad",
+        "name:pl": "Botewgrad",
+        "name:ro": "Botevgrad",
+        "name:tr": "Orhaniye",
+        "name:uk": "Ботевград",
+        "place": "town",
+        "population": "21241",
+        "source": "bgtopomaps",
+        "wikidata": "Q405426",
+        "wikipedia": "en:Botevgrad"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273488872,
+      "lat": 42.8956755,
+      "lon": 23.9148925,
+      "tags": {
+        "ekatte": "58030",
+        "int_name": "Pravets",
+        "name": "Правец",
+        "name:en": "Pravets",
+        "name:ro": "Praveț",
+        "name:ru": "Правец",
+        "place": "town",
+        "source": "bgtopomaps",
+        "wikidata": "Q387864"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273812257,
+      "lat": 42.9514929,
+      "lon": 23.6794469,
+      "tags": {
+        "ekatte": "43904",
+        "int_name": "Litakovo",
+        "name": "Литаково",
+        "name:en": "Litakovo",
+        "name:ro": "Litakovo",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2017742"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273812339,
+      "lat": 42.8913956,
+      "lon": 23.746976,
+      "tags": {
+        "ekatte": "12283",
+        "int_name": "Vrachesh",
+        "name": "Врачеш",
+        "name:en": "Vrachesh",
+        "name:ro": "Vraceș",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2013100"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273812803,
+      "lat": 42.9777956,
+      "lon": 23.7305179,
+      "tags": {
+        "ekatte": "51946",
+        "int_name": "Novachene",
+        "name": "Новачене",
+        "name:en": "Novachene",
+        "name:ro": "Novacene",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q4321889"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273813375,
+      "lat": 42.9517131,
+      "lon": 23.7686707,
+      "tags": {
+        "ekatte": "66860",
+        "int_name": "Skravena",
+        "name": "Скравена",
+        "name:de": "Skrawena",
+        "name:en": "Skravena",
+        "name:ro": "Skravena",
+        "place": "village",
+        "wikidata": "Q2021239"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273815136,
+      "lat": 43.1583501,
+      "lon": 23.6977,
+      "tags": {
+        "ekatte": "04827",
+        "int_name": "Bodenets",
+        "name": "Боденец",
+        "name:en": "Bodenets",
+        "place": "village",
+        "postal_code": "3128",
+        "source": "bgtopomaps",
+        "wikidata": "Q1079236"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273815145,
+      "lat": 43.1251445,
+      "lon": 23.6996884,
+      "tags": {
+        "ekatte": "39709",
+        "int_name": "Kreta",
+        "name": "Крета",
+        "name:bg": "Крета",
+        "name:en": "Kreta",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q4240486"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273815152,
+      "lat": 43.0099815,
+      "lon": 23.817919,
+      "tags": {
+        "ekatte": "04950",
+        "int_name": "Bozhenitsa",
+        "name": "Боженица",
+        "name:en": "Bojenitsa",
+        "name:ro": "Bojenița",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2012482"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273815198,
+      "lat": 43.14904,
+      "lon": 23.6572799,
+      "tags": {
+        "ekatte": "49031",
+        "int_name": "Moravitsa",
+        "name": "Моравица",
+        "name:en": "Moravitsa",
+        "place": "village",
+        "postal_code": "3145",
+        "source": "bgtopomaps",
+        "wikidata": "Q4302307"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273816212,
+      "lat": 42.9126669,
+      "lon": 23.87148,
+      "tags": {
+        "ekatte": "61807",
+        "int_name": "Razliv",
+        "name": "Разлив",
+        "name:en": "Razliv",
+        "name:ro": "Razliv",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q4388603"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273816738,
+      "lat": 43.10801,
+      "lon": 23.82902,
+      "tags": {
+        "ekatte": "66576",
+        "int_name": "Sinyo bardo",
+        "name": "Синьо бърдо",
+        "name:en": "Sinio Bardo",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1079402"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273817326,
+      "lat": 42.9903032,
+      "lon": 23.894915,
+      "tags": {
+        "ekatte": "35585",
+        "int_name": "Kalugerovo",
+        "name": "Калугерово",
+        "name:en": "Kalugerovo",
+        "name:ro": "Kalugherovo",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2016007"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273817597,
+      "lat": 43.1115361,
+      "lon": 23.7888592,
+      "tags": {
+        "ekatte": "54256",
+        "int_name": "Oslen Krivodol",
+        "name": "Ослен Криводол",
+        "name:en": "Oslen Krivodol",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1079016"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273817992,
+      "lat": 42.9162049,
+      "lon": 23.8414217,
+      "tags": {
+        "ekatte": "73256",
+        "int_name": "Trudovets",
+        "name": "Трудовец",
+        "name:en": "Trudovets",
+        "name:ro": "Trudoveț",
+        "place": "village",
+        "wikidata": "Q2021639"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273818028,
+      "lat": 43.162833,
+      "lon": 23.8028457,
+      "tags": {
+        "ekatte": "78135",
+        "int_name": "Tsarevets",
+        "name": "Царевец",
+        "name:en": "Tsarevets",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q4503141"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273872957,
+      "lat": 43.1707101,
+      "lon": 23.73332,
+      "tags": {
+        "ekatte": "22126",
+        "int_name": "Dolna Kremena",
+        "name": "Долна Кремена",
+        "name:en": "Dolna Kremena",
+        "place": "village",
+        "postal_code": "3153",
+        "source": "bgtopomaps",
+        "wikidata": "Q2458051"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273873411,
+      "lat": 43.0370576,
+      "lon": 23.9389747,
+      "tags": {
+        "ekatte": "47322",
+        "int_name": "Markovo ravnishte",
+        "name": "Марково равнище",
+        "name:en": "Markovo рavnishte",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1078751"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273873592,
+      "lat": 43.0156047,
+      "lon": 23.8788498,
+      "tags": {
+        "ekatte": "65872",
+        "int_name": "Svode",
+        "name": "Своде",
+        "name:en": "Svode",
+        "name:ro": "Svode",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2020352"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273873720,
+      "lat": 42.832271,
+      "lon": 23.9192001,
+      "tags": {
+        "ekatte": "05147",
+        "int_name": "Boykovets",
+        "name": "Бойковец",
+        "name:en": "Boykovets",
+        "name:ro": "Boikoveț",
+        "name:sr": "Бојковец",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q12083617"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273874306,
+      "lat": 43.0443865,
+      "lon": 23.7906912,
+      "tags": {
+        "ekatte": "27334",
+        "int_name": "Elov dol",
+        "name": "Елов дол",
+        "name:en": "Elov Dol",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q4175052"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273874600,
+      "lat": 43.1131072,
+      "lon": 23.6811845,
+      "tags": {
+        "ekatte": "62390",
+        "int_name": "Rebarkovo",
+        "name": "Ребърково",
+        "name:bg": "Ребърково",
+        "name:en": "Rebarkovo",
+        "place": "village",
+        "postal_code": "3158",
+        "source": "bgtopomaps",
+        "wikidata": "Q1078700"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273875897,
+      "lat": 42.9375457,
+      "lon": 23.9553815,
+      "tags": {
+        "ekatte": "54211",
+        "int_name": "Osikovska Lakavitsa",
+        "name": "Осиковска Лакавица",
+        "name:en": "Osikovska Lakavitsa",
+        "name:ro": "Osikovska Lakavița",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2019346"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273876920,
+      "lat": 43.12617,
+      "lon": 23.71912,
+      "tags": {
+        "ekatte": "24668",
+        "int_name": "Darmantsi",
+        "name": "Дърманци",
+        "name:en": "Darmantsi",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1078962"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273877109,
+      "lat": 43.029162,
+      "lon": 23.7545982,
+      "tags": {
+        "ekatte": "43788",
+        "int_name": "Lipnitsa",
+        "name": "Липница",
+        "name:en": "Lipnitsa",
+        "name:ro": "Lipnița",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q4262654"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273877602,
+      "lat": 43.1626001,
+      "lon": 23.65281,
+      "tags": {
+        "ekatte": "63450",
+        "int_name": "Ruska Bela",
+        "name": "Руска Бела",
+        "name:en": "Ruska Bela",
+        "place": "village",
+        "postal_code": "3148",
+        "source": "bgtopomaps",
+        "wikidata": "Q2654871"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273879884,
+      "lat": 42.9760264,
+      "lon": 23.6883438,
+      "tags": {
+        "ekatte": "18143",
+        "int_name": "Gurkovo",
+        "name": "Гурково",
+        "name:en": "Gurkovo",
+        "name:ro": "Gurkovo",
+        "place": "village",
+        "wikidata": "Q4152429"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273879888,
+      "lat": 43.091312,
+      "lon": 23.7636955,
+      "tags": {
+        "ekatte": "43654",
+        "int_name": "Lik",
+        "name": "Лик",
+        "name:en": "Lik",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q7240051"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273880029,
+      "lat": 43.0774919,
+      "lon": 23.8499886,
+      "tags": {
+        "ekatte": "40693",
+        "int_name": "Kurnovo",
+        "name": "Курново",
+        "name:en": "Kurnovo",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1079067"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273880118,
+      "lat": 43.13689,
+      "lon": 23.74611,
+      "tags": {
+        "ekatte": "06598",
+        "int_name": "Brusen",
+        "name": "Брусен",
+        "name:en": "Brusen",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1079251"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273880197,
+      "lat": 42.9927424,
+      "lon": 23.6347696,
+      "tags": {
+        "ekatte": "61594",
+        "int_name": "Radotina",
+        "name": "Радотина",
+        "name:en": "Radotina",
+        "name:ro": "Radotina",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2020144"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273880743,
+      "lat": 43.0584616,
+      "lon": 23.9067272,
+      "tags": {
+        "ekatte": "68432",
+        "int_name": "Sredni rat",
+        "name": "Средни рът",
+        "name:en": "Sredni Rat",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1079312"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273880892,
+      "lat": 42.9493105,
+      "lon": 23.9036101,
+      "tags": {
+        "ekatte": "58044",
+        "int_name": "Praveshka Lakavitsa",
+        "name": "Правешка Лакавица",
+        "name:en": "Praveshka Lakavitsa",
+        "name:ro": "Praveșka Lakavița",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q2018803"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273881181,
+      "lat": 43.0652508,
+      "lon": 23.7103409,
+      "tags": {
+        "ekatte": "72432",
+        "int_name": "Tipchenitsa",
+        "name": "Типченица",
+        "name:en": "Tipchenitsa",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1078971"
+      }
+    },
+    {
+      "type": "node",
+      "id": 273881516,
+      "lat": 43.0645536,
+      "lon": 23.6781794,
+      "tags": {
+        "alt_name": "Люти дол",
+        "alt_name:en": "Luti Dol",
+        "alt_name:nl": "Ljoeti Dol",
+        "ekatte": "44759",
+        "int_name": "Lyutidol",
+        "name": "Лютидол",
+        "name:en": "Lutidol",
+        "name:nl": "Ljoetidol",
+        "name:sr": "Љутидол",
+        "place": "village",
+        "source": "bgtopomaps",
+        "wikidata": "Q1078851"
+      }
+    },
+    {
+      "type": "node",
+      "id": 330360162,
+      "lat": 42.8905216,
+      "lon": 23.8210338,
+      "tags": {
+        "highway": "motorway_junction",
+        "name": "Ботевград",
+        "name:en": "Botevgrad",
+        "ref": "47"
+      }
+    },
+    {
+      "type": "node",
+      "id": 330366692,
+      "lat": 42.9373411,
+      "lon": 23.9699798,
+      "tags": {
+        "highway": "motorway_junction",
+        "name": "Осиковска Лакавица",
+        "name:en": "Osikovska Lakavitsa",
+        "ref": "60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 330367387,
+      "lat": 42.9130863,
+      "lon": 23.8919722,
+      "tags": {
+        "highway": "motorway_junction",
+        "name": "Правец",
+        "name:en": "Pravets",
+        "ref": "53"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1469730427,
+      "lat": 42.8929458,
+      "lon": 23.831582,
+      "tags": {
+        "highway": "motorway_junction",
+        "name": "Ботевград",
+        "name:en": "Botevgrad",
+        "ref": "47"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3012963407,
+      "lat": 42.8364901,
+      "lon": 23.6961515,
+      "tags": {
+        "name": "Зла поляна",
+        "place": "locality"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3106620870,
+      "lat": 43.1488175,
+      "lon": 23.7223038,
+      "tags": {
+        "name": "кв. Кременска рампа",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3106620871,
+      "lat": 43.1402089,
+      "lon": 23.69475,
+      "tags": {
+        "name": "кв. Лещака",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3106620872,
+      "lat": 43.1409058,
+      "lon": 23.6896791,
+      "tags": {
+        "name": "кв. Принчовец",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4773744847,
+      "lat": 42.8982331,
+      "lon": 23.9139222,
+      "tags": {
+        "name": "ж.к. Север",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4898982260,
+      "lat": 42.8769275,
+      "lon": 23.8097519,
+      "tags": {
+        "name": "Местност Зелин",
+        "place": "locality"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4899037490,
+      "lat": 42.8834437,
+      "lon": 23.8036547,
+      "tags": {
+        "name": "Вилна зона Зелин",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4899239298,
+      "lat": 42.8944111,
+      "lon": 23.7816468,
+      "tags": {
+        "name": "Вилна зона Чеканица",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4905918822,
+      "lat": 42.8444729,
+      "lon": 23.9237878,
+      "tags": {
+        "name": "Рендашка махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5617870426,
+      "lat": 42.9067928,
+      "lon": 23.9219392,
+      "tags": {
+        "name": "Правешки ханове",
+        "place": "locality"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5617936433,
+      "lat": 42.9170272,
+      "lon": 23.8970373,
+      "tags": {
+        "name": "Сираковска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5617936434,
+      "lat": 42.9212736,
+      "lon": 23.8796654,
+      "tags": {
+        "name": "Влъчковска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5617936435,
+      "lat": 42.9228412,
+      "lon": 23.8731335,
+      "tags": {
+        "name": "Куевска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5617936436,
+      "lat": 42.9276334,
+      "lon": 23.8699148,
+      "tags": {
+        "name": "Щапалска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5620684516,
+      "lat": 42.8976805,
+      "lon": 23.8971154,
+      "tags": {
+        "name": "кв. Скъравна",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622505548,
+      "lat": 42.8971398,
+      "lon": 23.9257417,
+      "tags": {
+        "name": "Симидарското",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622505549,
+      "lat": 42.8864989,
+      "lon": 23.931339,
+      "tags": {
+        "name": "Драганска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622505550,
+      "lat": 42.8894802,
+      "lon": 23.9391118,
+      "tags": {
+        "alt_name": "Стилковски рът",
+        "local_name": "Стилковска махала",
+        "name": "Дивчов рът",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622505551,
+      "lat": 42.8895812,
+      "lon": 23.946073,
+      "tags": {
+        "local_name": "Василковска махала",
+        "name": "Манастирица",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622505552,
+      "lat": 42.8931308,
+      "lon": 23.9457539,
+      "tags": {
+        "name": "Никовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622542396,
+      "lat": 42.8867044,
+      "lon": 23.9525695,
+      "tags": {
+        "local_name": "Радулска махала",
+        "name": "Манастирица 2",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5624039314,
+      "lat": 42.9023113,
+      "lon": 23.8838037,
+      "tags": {
+        "name": "Боновска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5627130373,
+      "lat": 42.8779389,
+      "lon": 23.9090877,
+      "tags": {
+        "name": "Живковска мах.",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5628201074,
+      "lat": 42.8617882,
+      "lon": 23.9738061,
+      "tags": {
+        "name": "Коловци",
+        "name:en": "Kolovci",
+        "name:ro": "Kolovți",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5628201075,
+      "lat": 42.861513,
+      "lon": 23.9675833,
+      "tags": {
+        "name": "Райчиновци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5628201076,
+      "lat": 42.8610726,
+      "lon": 23.9522196,
+      "tags": {
+        "name": "Кочовска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5628201077,
+      "lat": 42.8496368,
+      "lon": 23.9581634,
+      "tags": {
+        "name": "Чипровска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5628201078,
+      "lat": 42.8563967,
+      "lon": 23.9514262,
+      "tags": {
+        "int_name": "Marinkovtsi",
+        "name": "Маринковци",
+        "name:en": "Marinkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6208013875,
+      "lat": 43.1334774,
+      "lon": 23.6959757,
+      "tags": {
+        "name": "в.з. Каменица",
+        "place": "neighbourhood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6578666393,
+      "lat": 42.854217,
+      "lon": 23.9671337,
+      "tags": {
+        "name": "Горунака",
+        "name:en": "Gorunaka",
+        "name:ro": "Gorunaka",
+        "place": "village",
+        "wikidata": "Q2015159"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8436067867,
+      "lat": 42.9453376,
+      "lon": 23.9081196,
+      "tags": {
+        "name": "Лачовска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8436067868,
+      "lat": 42.957516,
+      "lon": 23.8692831,
+      "tags": {
+        "name": "Церица",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8436067869,
+      "lat": 42.9593788,
+      "lon": 23.8905962,
+      "tags": {
+        "name": "Йотова махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8436155737,
+      "lat": 42.9325176,
+      "lon": 23.8508546,
+      "tags": {
+        "name": "в.з. Трудовец",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8443459501,
+      "lat": 43.0642153,
+      "lon": 23.9088586,
+      "tags": {
+        "name": "Момчово търне",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8443459515,
+      "lat": 43.0584418,
+      "lon": 23.8960147,
+      "tags": {
+        "name": "Скръвенското",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8443499026,
+      "lat": 43.0486089,
+      "lon": 23.8995759,
+      "tags": {
+        "name": "Подлез",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8443499040,
+      "lat": 43.0686424,
+      "lon": 23.9005172,
+      "tags": {
+        "name": "Кондурето",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8443499050,
+      "lat": 43.0734496,
+      "lon": 23.9083219,
+      "tags": {
+        "name": "Койчевци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8448579343,
+      "lat": 42.9196294,
+      "lon": 23.8814942,
+      "tags": {
+        "name": "Мантовска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8448579344,
+      "lat": 42.9209895,
+      "lon": 23.8870755,
+      "tags": {
+        "name": "Пръчашка махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8448579345,
+      "lat": 42.9195135,
+      "lon": 23.890703,
+      "tags": {
+        "name": "Маргинска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8494851005,
+      "lat": 42.8362384,
+      "lon": 23.9428139,
+      "tags": {
+        "name": "Вилна зона \"Над Язовира\"",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9875088169,
+      "lat": 42.9611534,
+      "lon": 23.9900054,
+      "tags": {
+        "name": "Ниновци",
+        "name:en": "Ninovtsi",
+        "place": "hamlet",
+        "postal_code": "2164"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876397799,
+      "lat": 42.9593672,
+      "lon": 23.9973653,
+      "tags": {
+        "name": "Витковци",
+        "name:en": "Vitkovtsi",
+        "place": "hamlet",
+        "postal_code": "2164"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876397826,
+      "lat": 42.9514652,
+      "lon": 23.9932538,
+      "tags": {
+        "name": "Нешовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876397827,
+      "lat": 42.9477462,
+      "lon": 23.9851093,
+      "tags": {
+        "name": "Балините",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876397828,
+      "lat": 42.9511231,
+      "lon": 23.9985907,
+      "tags": {
+        "name": "Витьовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876397829,
+      "lat": 42.9559568,
+      "lon": 23.9879453,
+      "tags": {
+        "name": "Манговци",
+        "name:en": "Mangovtsi",
+        "place": "hamlet",
+        "postal_code": "2164"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876660518,
+      "lat": 43.0002953,
+      "lon": 23.7650705,
+      "tags": {
+        "name": "Раждавец",
+        "name:en": "Razhdavets",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876660519,
+      "lat": 43.0137761,
+      "lon": 23.7702283,
+      "tags": {
+        "name": "Горановци",
+        "name:en": "Goranovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9876660520,
+      "lat": 43.0167691,
+      "lon": 23.7514867,
+      "tags": {
+        "name": "Преславица",
+        "name:en": "Preslavitsa",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9878575179,
+      "lat": 43.0393374,
+      "lon": 23.7069949,
+      "tags": {
+        "name": "Креща",
+        "name:en": "Kreshta",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9878575180,
+      "lat": 43.0299118,
+      "lon": 23.720523,
+      "tags": {
+        "name": "Дилковци",
+        "name:en": "Dilkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9878575181,
+      "lat": 43.0213018,
+      "lon": 23.7395854,
+      "tags": {
+        "name": "Нешовци",
+        "name:en": "Neshovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9879117153,
+      "lat": 43.0049289,
+      "lon": 23.9750132,
+      "tags": {
+        "name": "Лъга",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9879117154,
+      "lat": 42.9917638,
+      "lon": 23.9838722,
+      "tags": {
+        "name": "Богдан",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9888242329,
+      "lat": 42.9675915,
+      "lon": 23.9869831,
+      "tags": {
+        "name": "Големи дол",
+        "place": "hamlet",
+        "postal_code": "2166"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9910795440,
+      "lat": 42.9703546,
+      "lon": 23.9607979,
+      "tags": {
+        "name": "Курташете",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9910795441,
+      "lat": 42.9774154,
+      "lon": 23.9689342,
+      "tags": {
+        "name": "Голювица",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9910795473,
+      "lat": 42.9960015,
+      "lon": 23.9428619,
+      "tags": {
+        "name": "Търнето",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9910795474,
+      "lat": 43.0017622,
+      "lon": 23.9573827,
+      "tags": {
+        "name": "Пещна лъка",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9910795475,
+      "lat": 42.9823328,
+      "lon": 23.9426628,
+      "tags": {
+        "name": "Кленака",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9910795476,
+      "lat": 42.9761895,
+      "lon": 23.9485683,
+      "tags": {
+        "name": "Сечковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916868313,
+      "lat": 43.0352015,
+      "lon": 23.741206,
+      "tags": {
+        "name": "Сирашки ливади",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916868314,
+      "lat": 43.0385998,
+      "lon": 23.7408535,
+      "tags": {
+        "name": "Йолаковци",
+        "name:en": "Yolakovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936721,
+      "lat": 43.0405633,
+      "lon": 23.7384657,
+      "tags": {
+        "name": "Вълчовци",
+        "name:en": "Valchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936722,
+      "lat": 43.0431845,
+      "lon": 23.7345523,
+      "tags": {
+        "name": "Куковци",
+        "name:en": "Kukovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936723,
+      "lat": 43.0453552,
+      "lon": 23.7368686,
+      "tags": {
+        "name": "Перчовци",
+        "name:en": "Perchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936724,
+      "lat": 43.0469698,
+      "lon": 23.7553814,
+      "tags": {
+        "name": "Ломето",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936725,
+      "lat": 43.0406791,
+      "lon": 23.7662704,
+      "tags": {
+        "name": "Пейовци",
+        "name:en": "Peyovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936726,
+      "lat": 43.0452818,
+      "lon": 23.7646932,
+      "tags": {
+        "name": "Пекинци",
+        "name:en": "Pekintsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936727,
+      "lat": 43.0437536,
+      "lon": 23.7707912,
+      "tags": {
+        "name": "Навущарете",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936728,
+      "lat": 43.0443847,
+      "lon": 23.7751798,
+      "tags": {
+        "name": "Грънчарете",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936729,
+      "lat": 43.0469505,
+      "lon": 23.7762274,
+      "tags": {
+        "name": "Вириите",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936730,
+      "lat": 43.0480885,
+      "lon": 23.771584,
+      "tags": {
+        "name": "Косморането",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936731,
+      "lat": 43.0483678,
+      "lon": 23.78567,
+      "tags": {
+        "name": "Томовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936732,
+      "lat": 43.0528369,
+      "lon": 23.7829236,
+      "tags": {
+        "name": "Пановци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936733,
+      "lat": 43.0572436,
+      "lon": 23.7780819,
+      "tags": {
+        "name": "Вълкановци",
+        "name:en": "Valkanovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936734,
+      "lat": 43.0569539,
+      "lon": 23.7908089,
+      "tags": {
+        "name": "Кьорколовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936735,
+      "lat": 43.0518748,
+      "lon": 23.7853868,
+      "tags": {
+        "name": "Гарването",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936736,
+      "lat": 43.0487403,
+      "lon": 23.7999825,
+      "tags": {
+        "name": "Стаменовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916936737,
+      "lat": 43.0419636,
+      "lon": 23.7975192,
+      "tags": {
+        "name": "Шейтановци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916997856,
+      "lat": 43.0258686,
+      "lon": 23.7788892,
+      "tags": {
+        "name": "Лицето",
+        "name:en": "Litseto",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916997857,
+      "lat": 43.0230328,
+      "lon": 23.7696448,
+      "tags": {
+        "name": "Михайловци",
+        "name:en": "Mihaylovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916997858,
+      "lat": 43.0207248,
+      "lon": 23.7727876,
+      "tags": {
+        "name": "Гологлавци",
+        "name:en": "Gologlavtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916997859,
+      "lat": 43.0190779,
+      "lon": 23.7786582,
+      "tags": {
+        "name": "Дончовци",
+        "name:en": "Donchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9916997860,
+      "lat": 43.0125033,
+      "lon": 23.7797463,
+      "tags": {
+        "name": "Мановци",
+        "name:en": "Manovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9920576305,
+      "lat": 42.9924923,
+      "lon": 23.8260686,
+      "tags": {
+        "name": "Урвич",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9920844463,
+      "lat": 42.9941681,
+      "lon": 23.8102705,
+      "tags": {
+        "name": "Коловци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9920844464,
+      "lat": 42.9892358,
+      "lon": 23.878276,
+      "tags": {
+        "name": "Катрачите",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9920844465,
+      "lat": 42.9872176,
+      "lon": 23.8905285,
+      "tags": {
+        "name": "Габрика",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9920844466,
+      "lat": 42.9889542,
+      "lon": 23.871675,
+      "tags": {
+        "name": "Чекотин",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921068056,
+      "lat": 42.9874441,
+      "lon": 23.8994999,
+      "tags": {
+        "name": "Димитровци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921068057,
+      "lat": 42.9955137,
+      "lon": 23.9182627,
+      "tags": {
+        "name": "Кардашица",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921068058,
+      "lat": 42.9913031,
+      "lon": 23.9106847,
+      "tags": {
+        "name": "Бундаците",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921068059,
+      "lat": 42.9901017,
+      "lon": 23.9199377,
+      "tags": {
+        "name": "Костадиновец",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921068060,
+      "lat": 42.9902207,
+      "lon": 23.9259058,
+      "tags": {
+        "name": "Газибарска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921068061,
+      "lat": 42.993996,
+      "lon": 23.9270308,
+      "tags": {
+        "name": "Джиделковец",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921948101,
+      "lat": 43.0188486,
+      "lon": 23.9566126,
+      "tags": {
+        "name": "Черни връх",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921948102,
+      "lat": 43.0126313,
+      "lon": 23.9652861,
+      "tags": {
+        "name": "Станчовец",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921948103,
+      "lat": 43.0071171,
+      "lon": 23.9653598,
+      "tags": {
+        "name": "Градище",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9921948104,
+      "lat": 43.0024664,
+      "lon": 23.948533,
+      "tags": {
+        "name": "Раздол",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922778994,
+      "lat": 42.9392931,
+      "lon": 23.9643128,
+      "tags": {
+        "name": "Кръстовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922778995,
+      "lat": 42.9269432,
+      "lon": 23.9375255,
+      "tags": {
+        "name": "Дръвница",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922778996,
+      "lat": 42.9324358,
+      "lon": 23.9561364,
+      "tags": {
+        "name": "Германите",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922778997,
+      "lat": 42.93303,
+      "lon": 23.9523447,
+      "tags": {
+        "name": "Байковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922778998,
+      "lat": 42.9302722,
+      "lon": 23.9637024,
+      "tags": {
+        "name": "Отошанска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922778999,
+      "lat": 42.9277301,
+      "lon": 23.9462371,
+      "tags": {
+        "name": "Йоловска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779000,
+      "lat": 42.9318736,
+      "lon": 23.9319699,
+      "tags": {
+        "name": "Бошковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779001,
+      "lat": 42.9446515,
+      "lon": 23.9499947,
+      "tags": {
+        "name": "Пековска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779002,
+      "lat": 42.9437602,
+      "lon": 23.9550628,
+      "tags": {
+        "name": "Боновци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779003,
+      "lat": 42.9447862,
+      "lon": 23.9619006,
+      "tags": {
+        "name": "Краевска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779004,
+      "lat": 42.9488794,
+      "lon": 23.9644205,
+      "tags": {
+        "name": "Станьовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779005,
+      "lat": 42.9418993,
+      "lon": 23.9419595,
+      "tags": {
+        "name": "Дричовска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779006,
+      "lat": 42.9486411,
+      "lon": 23.9434543,
+      "tags": {
+        "name": "Рачовска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779007,
+      "lat": 42.9459365,
+      "lon": 23.9343656,
+      "tags": {
+        "name": "Грозденска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779008,
+      "lat": 42.9502886,
+      "lon": 23.9321996,
+      "tags": {
+        "name": "Вутешковска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779009,
+      "lat": 42.9490961,
+      "lon": 23.9264771,
+      "tags": {
+        "name": "Равнище",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779010,
+      "lat": 42.9575121,
+      "lon": 23.9112437,
+      "tags": {
+        "name": "Кръстов дол",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779011,
+      "lat": 42.9600041,
+      "lon": 23.8971112,
+      "tags": {
+        "name": "Бърсашка махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779012,
+      "lat": 42.9456028,
+      "lon": 23.9704274,
+      "tags": {
+        "name": "Лупарете",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779013,
+      "lat": 42.9437022,
+      "lon": 23.9737963,
+      "tags": {
+        "name": "Баринска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779014,
+      "lat": 42.9513984,
+      "lon": 23.9718222,
+      "tags": {
+        "name": "Семковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779015,
+      "lat": 42.9496865,
+      "lon": 23.9772509,
+      "tags": {
+        "name": "Крушарете",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922779016,
+      "lat": 42.9444405,
+      "lon": 23.9813923,
+      "tags": {
+        "name": "Тотьовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9922862417,
+      "lat": 42.9441318,
+      "lon": 23.9893033,
+      "tags": {
+        "name": "Гроздьовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9926946222,
+      "lat": 43.0407993,
+      "lon": 23.7788121,
+      "tags": {
+        "name": "Лисовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9926946223,
+      "lat": 43.0366407,
+      "lon": 23.7788925,
+      "tags": {
+        "name": "Кривошийска",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9926946224,
+      "lat": 43.0357075,
+      "lon": 23.7831411,
+      "tags": {
+        "name": "Славковци",
+        "name:en": "Slavkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9928076977,
+      "lat": 43.0195712,
+      "lon": 23.8452807,
+      "tags": {
+        "name": "Усонайта",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9928076978,
+      "lat": 43.0149346,
+      "lon": 23.8401055,
+      "tags": {
+        "name": "Мурта",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9928076979,
+      "lat": 43.0122421,
+      "lon": 23.8642622,
+      "tags": {
+        "name": "Своденски корман",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9928076982,
+      "lat": 43.025141,
+      "lon": 23.8417464,
+      "tags": {
+        "name": "Кръста",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9928077065,
+      "lat": 43.0278213,
+      "lon": 23.8309756,
+      "tags": {
+        "name": "Чашката",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9928077066,
+      "lat": 43.0323301,
+      "lon": 23.8259506,
+      "tags": {
+        "name": "Бука",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9929299187,
+      "lat": 43.0026776,
+      "lon": 23.7836178,
+      "tags": {
+        "name": "Пелиница",
+        "name:en": "Pelinitsa",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9929299188,
+      "lat": 43.0060864,
+      "lon": 23.7761482,
+      "tags": {
+        "name": "Тотовци",
+        "name:en": "Totovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9932450719,
+      "lat": 42.9378688,
+      "lon": 23.9146854,
+      "tags": {
+        "name": "Неколска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9932461334,
+      "lat": 42.8737553,
+      "lon": 23.9770261,
+      "tags": {
+        "name": "Николишко бърдо",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934649537,
+      "lat": 43.0099847,
+      "lon": 23.7761524,
+      "tags": {
+        "name": "Цанковци",
+        "name:en": "Tsankovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934747030,
+      "lat": 43.0032343,
+      "lon": 23.7977846,
+      "tags": {
+        "name": "Барбушовци",
+        "name:en": "Barbushovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934747031,
+      "lat": 43.0117579,
+      "lon": 23.7988284,
+      "tags": {
+        "name": "Нинковци",
+        "name:en": "Ninkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934747032,
+      "lat": 43.0134434,
+      "lon": 23.7984986,
+      "tags": {
+        "name": "Павловци",
+        "name:en": "Pavlovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934747033,
+      "lat": 43.0143534,
+      "lon": 23.7908899,
+      "tags": {
+        "name": "Цоловци",
+        "name:en": "Tsolovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749354,
+      "lat": 43.0186262,
+      "lon": 23.7913513,
+      "tags": {
+        "name": "Тоновци",
+        "name:en": "Tonovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749355,
+      "lat": 43.0223756,
+      "lon": 23.791008,
+      "tags": {
+        "name": "Ганинци",
+        "name:en": "Ganintsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749356,
+      "lat": 43.0245201,
+      "lon": 23.7985789,
+      "tags": {
+        "name": "Пейчовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749357,
+      "lat": 43.0231051,
+      "lon": 23.807772,
+      "tags": {
+        "name": "Томовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749358,
+      "lat": 43.0252901,
+      "lon": 23.8276232,
+      "tags": {
+        "name": "Банинци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749359,
+      "lat": 43.0335047,
+      "lon": 23.8041361,
+      "tags": {
+        "name": "Търнака",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749360,
+      "lat": 43.0317226,
+      "lon": 23.8119627,
+      "tags": {
+        "name": "Лашовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749361,
+      "lat": 43.0357375,
+      "lon": 23.821426,
+      "tags": {
+        "name": "Конарника",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749362,
+      "lat": 43.0475476,
+      "lon": 23.8125986,
+      "tags": {
+        "name": "Толско ливаде",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9934749363,
+      "lat": 43.0294488,
+      "lon": 23.8545247,
+      "tags": {
+        "name": "Христовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247142,
+      "lat": 43.0285164,
+      "lon": 23.8784167,
+      "tags": {
+        "name": "Свирчака",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247143,
+      "lat": 43.0288772,
+      "lon": 23.8690933,
+      "tags": {
+        "name": "Мусачево",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247144,
+      "lat": 43.0371047,
+      "lon": 23.8480729,
+      "tags": {
+        "name": "Чукльовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247145,
+      "lat": 43.0360079,
+      "lon": 23.8534241,
+      "tags": {
+        "name": "Цаковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247146,
+      "lat": 43.0335761,
+      "lon": 23.8508051,
+      "tags": {
+        "name": "Цановци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247147,
+      "lat": 43.0389982,
+      "lon": 23.8653441,
+      "tags": {
+        "name": "Цанковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247148,
+      "lat": 43.0424127,
+      "lon": 23.8607998,
+      "tags": {
+        "name": "Бурньовица",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247149,
+      "lat": 43.0441508,
+      "lon": 23.8602619,
+      "tags": {
+        "name": "Цанковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247150,
+      "lat": 43.0238067,
+      "lon": 23.8882372,
+      "tags": {
+        "name": "Венеца",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9938247151,
+      "lat": 43.0392408,
+      "lon": 23.8858554,
+      "tags": {
+        "name": "Борова шума",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9941001335,
+      "lat": 43.0048502,
+      "lon": 23.787551,
+      "tags": {
+        "name": "Кьосовци",
+        "name:en": "Kyosovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9943541615,
+      "lat": 43.009018,
+      "lon": 23.8521911,
+      "tags": {
+        "name": "Боженски корман",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9943756141,
+      "lat": 43.0210167,
+      "lon": 23.7508933,
+      "tags": {
+        "name": "Пешуновци",
+        "name:en": "Peshunovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9943756142,
+      "lat": 43.01875,
+      "lon": 23.7406933,
+      "tags": {
+        "name": "Найденовци",
+        "name:en": "Naydenovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9987022930,
+      "lat": 43.0161147,
+      "lon": 23.7336069,
+      "tags": {
+        "name": "Стеьовци",
+        "name:en": "Steyovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9999740874,
+      "lat": 43.0327865,
+      "lon": 23.6431426,
+      "tags": {
+        "name": "Белчово",
+        "name:en": "Belchovo",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9999740875,
+      "lat": 43.0264119,
+      "lon": 23.6619123,
+      "tags": {
+        "name": "Равна",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10006315418,
+      "lat": 43.0057909,
+      "lon": 23.8947685,
+      "tags": {
+        "name": "Рударец",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10006315419,
+      "lat": 43.0046925,
+      "lon": 23.9290364,
+      "tags": {
+        "name": "Стайковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10006315420,
+      "lat": 43.0058694,
+      "lon": 23.919359,
+      "tags": {
+        "name": "Златовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10006355806,
+      "lat": 43.0412422,
+      "lon": 23.9024788,
+      "tags": {
+        "name": "Чухльовското",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10034533282,
+      "lat": 43.0486999,
+      "lon": 23.9197514,
+      "tags": {
+        "name": "Бобовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10034533286,
+      "lat": 43.0238395,
+      "lon": 23.9296942,
+      "tags": {
+        "name": "Бакова махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10034533287,
+      "lat": 43.0275648,
+      "lon": 23.920134,
+      "tags": {
+        "name": "Нетовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10034533288,
+      "lat": 43.0343957,
+      "lon": 23.9241518,
+      "tags": {
+        "name": "Усоето",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10034533289,
+      "lat": 43.0215031,
+      "lon": 23.9047557,
+      "tags": {
+        "name": "Преход",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10034533290,
+      "lat": 43.0632194,
+      "lon": 23.9201827,
+      "tags": {
+        "name": "Ценовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467362,
+      "lat": 43.0762401,
+      "lon": 23.8829776,
+      "tags": {
+        "name": "Спаньово",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467363,
+      "lat": 43.0692682,
+      "lon": 23.8188616,
+      "tags": {
+        "name": "Диловска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467364,
+      "lat": 43.0689992,
+      "lon": 23.7263002,
+      "tags": {
+        "name": "Чечерта",
+        "name:en": "Checherta",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467365,
+      "lat": 43.059302,
+      "lon": 23.7399747,
+      "tags": {
+        "name": "Чутанете",
+        "name:en": "Chutanete",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467366,
+      "lat": 43.0576698,
+      "lon": 23.7350263,
+      "tags": {
+        "name": "Кросовци",
+        "name:en": "Krosovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467367,
+      "lat": 43.0556293,
+      "lon": 23.7295624,
+      "tags": {
+        "name": "Торлаците",
+        "name:en": "Torlatsite",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467368,
+      "lat": 43.050961,
+      "lon": 23.721035,
+      "tags": {
+        "name": "Койчевци",
+        "name:en": "Koychevtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467369,
+      "lat": 43.0518893,
+      "lon": 23.7241733,
+      "tags": {
+        "name": "Богдановци",
+        "name:en": "Bogdanovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467370,
+      "lat": 43.0455211,
+      "lon": 23.7113712,
+      "tags": {
+        "name": "Вунчовци",
+        "name:en": "Vunchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467371,
+      "lat": 43.0504886,
+      "lon": 23.6820348,
+      "tags": {
+        "name": "Манчовци",
+        "name:en": "Manchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10040467372,
+      "lat": 43.0427638,
+      "lon": 23.7014217,
+      "tags": {
+        "name": "Копровец",
+        "name:en": "Koprovets",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10048613224,
+      "lat": 42.9182979,
+      "lon": 23.9689248,
+      "tags": {
+        "name": "Цековци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10048613225,
+      "lat": 42.9199629,
+      "lon": 23.9902528,
+      "tags": {
+        "name": "Йошеновци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10048613226,
+      "lat": 42.9155541,
+      "lon": 23.9797408,
+      "tags": {
+        "name": "Добричковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10048613227,
+      "lat": 42.9245427,
+      "lon": 23.9801814,
+      "tags": {
+        "name": "Нейчовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10048613229,
+      "lat": 42.9264672,
+      "lon": 23.9946418,
+      "tags": {
+        "name": "Черковци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10048613230,
+      "lat": 42.9238446,
+      "lon": 23.9895595,
+      "tags": {
+        "name": "Милинци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10048613231,
+      "lat": 42.9222332,
+      "lon": 23.9676281,
+      "tags": {
+        "name": "Дрена",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10085621814,
+      "lat": 43.086426,
+      "lon": 23.6731392,
+      "tags": {
+        "name": "Вълковци",
+        "name:en": "Valkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10085621815,
+      "lat": 43.0842445,
+      "lon": 23.6760979,
+      "tags": {
+        "name": "Ванчовци",
+        "name:en": "Vanchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10085621816,
+      "lat": 43.0677769,
+      "lon": 23.6686686,
+      "tags": {
+        "name": "Кацарска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10085686817,
+      "lat": 43.0748933,
+      "lon": 23.6584333,
+      "tags": {
+        "name": "Средния брусник",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10085686818,
+      "lat": 43.0722757,
+      "lon": 23.6474684,
+      "tags": {
+        "name": "Горния брусник",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10085686819,
+      "lat": 43.081476,
+      "lon": 23.6676601,
+      "tags": {
+        "name": "Тишовска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10085686820,
+      "lat": 43.0776519,
+      "lon": 23.6700661,
+      "tags": {
+        "name": "Джурошка махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589445998,
+      "lat": 43.008289,
+      "lon": 23.6301407,
+      "tags": {
+        "name": "Лалковци",
+        "name:en": "Lalkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589445999,
+      "lat": 43.01023,
+      "lon": 23.6359487,
+      "tags": {
+        "name": "Чачовци",
+        "name:en": "Chachovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589446000,
+      "lat": 43.008144,
+      "lon": 23.6381359,
+      "tags": {
+        "name": "Вълчовци",
+        "name:en": "Valchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589446001,
+      "lat": 43.0087299,
+      "lon": 23.6439203,
+      "tags": {
+        "name": "Кратункьовци",
+        "name:en": "Kratunkyovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589446002,
+      "lat": 43.0058291,
+      "lon": 23.6560783,
+      "tags": {
+        "name": "Вълковци",
+        "name:en": "Valkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589446003,
+      "lat": 42.9994585,
+      "lon": 23.6317519,
+      "tags": {
+        "name": "Лъга",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589446004,
+      "lat": 43.0013135,
+      "lon": 23.6567462,
+      "tags": {
+        "name": "Герговци",
+        "name:en": "Gergovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589457805,
+      "lat": 43.0028982,
+      "lon": 23.6595949,
+      "tags": {
+        "name": "Бърдото",
+        "name:en": "Bardoto",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589457808,
+      "lat": 42.9707278,
+      "lon": 23.6285542,
+      "tags": {
+        "name": "Мензивара",
+        "name:en": "Menzivara",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589457809,
+      "lat": 42.9719098,
+      "lon": 23.6207057,
+      "tags": {
+        "name": "Вълковци",
+        "name:en": "Valkovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10589457810,
+      "lat": 42.9474928,
+      "lon": 23.6286422,
+      "tags": {
+        "name": "Гроздовци",
+        "name:en": "Grozdovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10906720075,
+      "lat": 42.9880686,
+      "lon": 23.949675,
+      "tags": {
+        "name": "Свин дол",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10933612919,
+      "lat": 42.857141,
+      "lon": 23.9278356,
+      "tags": {
+        "name": "Дочовци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10933612920,
+      "lat": 42.8597556,
+      "lon": 23.9577887,
+      "tags": {
+        "name": "Цальовска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10991349923,
+      "lat": 42.8200854,
+      "lon": 23.801787,
+      "tags": {
+        "int_name": "m. Ribni vir",
+        "name": "м. Рибни вир",
+        "name:bg": "м. Рибни вир",
+        "name:en": "m. Ribni vir",
+        "place": "locality"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11037770435,
+      "lat": 42.8627759,
+      "lon": 23.9310374,
+      "tags": {
+        "name": "Ламбовска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11037770436,
+      "lat": 42.8641347,
+      "lon": 23.9420711,
+      "tags": {
+        "name": "Керемидци",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11161870738,
+      "lat": 43.0168336,
+      "lon": 23.9346966,
+      "tags": {
+        "name": "Венчарете",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11516618116,
+      "lat": 42.9953164,
+      "lon": 23.909649,
+      "tags": {
+        "name": "Мека поляна",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11932999478,
+      "lat": 42.9868081,
+      "lon": 23.9094787,
+      "tags": {
+        "name": "Въгляра",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11952143408,
+      "lat": 42.8980172,
+      "lon": 23.8924897,
+      "tags": {
+        "name": "Поповска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11952143409,
+      "lat": 42.9041201,
+      "lon": 23.8781435,
+      "tags": {
+        "name": "Чобанска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11952143410,
+      "lat": 42.9030939,
+      "lon": 23.8679442,
+      "tags": {
+        "name": "Гроевска махала",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12456108612,
+      "lat": 43.0801146,
+      "lon": 23.7188364,
+      "tags": {
+        "name": "Кожухарите",
+        "name:en": "Kozhuharite",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12456108613,
+      "lat": 43.0865792,
+      "lon": 23.7200715,
+      "tags": {
+        "name": "Стайкьовец",
+        "name:en": "Staikyovets",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12460965033,
+      "lat": 43.0472384,
+      "lon": 23.6293743,
+      "tags": {
+        "name": "Мирчовци",
+        "name:en": "Mirchovtsi",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12460965034,
+      "lat": 43.0432931,
+      "lon": 23.6377056,
+      "tags": {
+        "name": "Франов лак",
+        "place": "hamlet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12476230588,
+      "lat": 42.9045095,
+      "lon": 23.8070354,
+      "tags": {
+        "name": "ж.к. Васил Левски",
+        "place": "suburb"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12476269829,
+      "lat": 42.9153778,
+      "lon": 23.795168,
+      "tags": {
+        "name": "ж.к. Саранск",
+        "place": "suburb"
+      }
+    },
+    {
+      "type": "way",
+      "id": 17045829,
+      "center": {
+        "lat": 42.8567287,
+        "lon": 23.7916161
+      },
+      "tags": {
+        "highway": "motorway",
+        "int_ref": "E 79",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "765",
+        "lit": "24/7",
+        "maxspeed": "80",
+        "mindistance": "50",
+        "name": "Автомагистрала Хемус",
+        "name:en": "Hemus Motorway",
+        "oneway": "yes",
+        "ref": "A 2",
+        "shoulder": "right",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tunnel": "yes",
+        "tunnel:name": "Ечемишка",
+        "tunnel:name:en": "Echemishka"
+      }
+    },
+    {
+      "type": "way",
+      "id": 17045989,
+      "center": {
+        "lat": 42.9155268,
+        "lon": 23.9137971
+      },
+      "tags": {
+        "highway": "motorway",
+        "int_ref": "E 83",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "834",
+        "lit": "24/7",
+        "maxheight": "default",
+        "maxspeed": "80",
+        "name": "Автомагистрала Хемус",
+        "name:en": "Hemus Motorway",
+        "oneway": "yes",
+        "ref": "A 2",
+        "shoulder": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tunnel": "yes",
+        "tunnel:name": "Правешки ханове",
+        "tunnel:name:en": "Praveshki hanove"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30010414,
+      "center": {
+        "lat": 42.9157843,
+        "lon": 23.9139568
+      },
+      "tags": {
+        "highway": "motorway",
+        "int_ref": "E 83",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "830",
+        "lit": "24/7",
+        "maxheight": "default",
+        "maxspeed": "80",
+        "name": "Автомагистрала Хемус",
+        "name:en": "Hemus Motorway",
+        "ref": "A 2",
+        "shoulder": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tunnel": "yes",
+        "tunnel:name": "Правешки ханове",
+        "tunnel:name:en": "Praveshki hanove"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30010513,
+      "center": {
+        "lat": 42.8569643,
+        "lon": 23.791429
+      },
+      "tags": {
+        "highway": "motorway",
+        "int_ref": "E 79",
+        "lanes": "3",
+        "layer": "-1",
+        "length": "820",
+        "lit": "24/7",
+        "maxheight": "default",
+        "maxspeed": "80",
+        "mindistance": "50",
+        "name": "Автомагистрала Хемус",
+        "name:en": "Hemus Motorway",
+        "oneway": "yes",
+        "ref": "A 2",
+        "shoulder": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tunnel": "yes",
+        "tunnel:name": "Ечемишка",
+        "tunnel:name:en": "Echemishka"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30010556,
+      "center": {
+        "lat": 42.8380053,
+        "lon": 23.7966361
+      },
+      "tags": {
+        "highway": "motorway",
+        "int_ref": "E 79",
+        "lanes": "3",
+        "layer": "-1",
+        "length": "878",
+        "lit": "24/7",
+        "maxheight": "4.5",
+        "maxspeed": "80",
+        "name": "Автомагистрала Хемус",
+        "name:en": "Hemus Motorway",
+        "oneway": "yes",
+        "ref": "A 2",
+        "shoulder": "no",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "tunnel": "yes",
+        "tunnel:name": "Топли дол",
+        "tunnel:name:en": "Topli dol"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30010961,
+      "center": {
+        "lat": 42.8379302,
+        "lon": 23.7969782
+      },
+      "tags": {
+        "highway": "motorway",
+        "int_ref": "E 79",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "883",
+        "lit": "24/7",
+        "maxheight": "4.5",
+        "maxspeed": "80",
+        "mindistance": "50",
+        "name": "Автомагистрала Хемус",
+        "name:en": "Hemus Motorway",
+        "oneway": "yes",
+        "ref": "A 2",
+        "shoulder": "right",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "tunnel": "yes",
+        "tunnel:name": "Топли дол",
+        "tunnel:name:en": "Topli dol"
+      }
+    },
+    {
+      "type": "way",
+      "id": 229282650,
+      "center": {
+        "lat": 42.8801134,
+        "lon": 23.8052121
+      },
+      "tags": {
+        "highway": "unclassified",
+        "layer": "-1",
+        "maxweight": "15",
+        "name": "Асен Златаров",
+        "ref": "SFO2047",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1304321805,
+      "center": {
+        "lat": 43.0582134,
+        "lon": 23.6880576
+      },
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 79",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "490",
+        "maxspeed": "80",
+        "name": "Скоростен път Мездра - Ботевград",
+        "oneway": "yes",
+        "ref": "1",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1304321806,
+      "center": {
+        "lat": 43.058206,
+        "lon": 23.6881818
+      },
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 79",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "490",
+        "maxspeed": "80",
+        "name": "Скоростен път Мездра - Ботевград",
+        "oneway": "yes",
+        "ref": "1",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1304321809,
+      "center": {
+        "lat": 43.0551496,
+        "lon": 23.6862823
+      },
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 79",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "340",
+        "maxspeed": "80",
+        "name": "Скоростен път Мездра - Ботевград",
+        "oneway": "yes",
+        "ref": "1",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1304321810,
+      "center": {
+        "lat": 43.0550958,
+        "lon": 23.6863892
+      },
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 79",
+        "lanes": "2",
+        "layer": "-1",
+        "length": "340",
+        "maxspeed": "80",
+        "name": "Скоростен път Мездра - Ботевград",
+        "oneway": "yes",
+        "ref": "1",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1394907102,
+      "center": {
+        "lat": 43.031064,
+        "lon": 23.6656624
+      },
+      "tags": {
+        "construction": "trunk",
+        "highway": "construction",
+        "int_ref": "E 79",
+        "lanes": "2",
+        "layer": "-1",
+        "maxspeed": "90",
+        "name": "Скоростен път Мездра - Ботевград",
+        "oneway": "yes",
+        "ref": "1",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1541033373,
+      "center": {
+        "lat": 43.1404709,
+        "lon": 23.7025222
+      },
+      "tags": {
+        "highway": "residential",
+        "int_name": "Manastirishte",
+        "lanes": "2",
+        "layer": "-1",
+        "name": "Манастирище",
+        "name:en": "Manastirishte",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 18451930,
+      "center": {
+        "lat": 42.8494361,
+        "lon": 23.9942382
+      },
+      "tags": {
+        "name": "Вранещица",
+        "place": "neighbourhood",
+        "type": "multipolygon"
+      }
+    }
+  ]
+}
