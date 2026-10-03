@@ -2910,14 +2910,11 @@ legend {
   }
 }
 
-/* Full-color photo headers with prominent, opaque service icon badges. */
-.service-card { --card-pad-x:24px; --card-pad-y:24px; min-height:330px; }
-.service-card-media { position:relative; flex-shrink:0; aspect-ratio:2.25 / 1; margin:calc(-1 * var(--card-pad-y)) calc(-1 * var(--card-pad-x)) 20px; overflow:hidden; border-radius:calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; background:#25303a; }
-.service-image { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; opacity:1; }
-.service-card-media .service-card-top { position:absolute; left:14px; right:14px; bottom:12px; margin:0; }
-.service-card .service-icon { display:grid; place-items:center; width:56px; height:56px; padding:10px; color:var(--yellow); background:var(--ink); border:2px solid white; border-radius:10px; box-shadow:0 3px 10px #0005; }
+/* Icon-led cards retain short descriptions and direct request actions. */
+.service-card { --card-pad-x:24px; --card-pad-y:24px; min-height:260px; }
+.service-card-top { margin-bottom:20px; }
+.service-card .service-icon { display:grid; place-items:center; flex-shrink:0; width:56px; height:56px; padding:10px; color:var(--yellow); background:var(--ink); border-radius:10px; }
 .service-card .service-icon .icon { width:32px; height:32px; stroke-width:1.9; }
-.service-card .service-tag { color:white; background:var(--ink); border-radius:4px; padding:6px 9px; }
 .service-card p { color:#4a5145; font-size:14px; line-height:1.65; margin-bottom:18px; overflow-wrap:anywhere; }
 .featured p { color:#3f371f; }
 .service-title-short { display:none; }
@@ -2931,8 +2928,7 @@ legend {
 @media(max-width:760px) {
   .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .service-card { --card-pad-x:16px; --card-pad-y:16px; min-height:228px; }
-  .service-card-media { aspect-ratio:1.6 / 1; margin-bottom:16px; }
-  .service-card-media .service-card-top { left:10px; right:10px; bottom:9px; }
+  .service-card-top { margin-bottom:16px; }
   .service-card .service-icon { width:48px; height:48px; padding:8px; border-radius:8px; }
   .service-card .service-icon .icon { width:28px; height:28px; }
   .service-card h3 { font-size:16px; line-height:1.35; margin-bottom:12px; letter-spacing:-.3px; }

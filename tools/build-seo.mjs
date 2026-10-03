@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { copy, services, regions, locations, faqs, paths, homeMeta } from '../content/site-data.mjs';
 import { serviceGuides, regionGuides } from '../content/seo-content.mjs';
-import { serviceImage, serviceCardTitle } from '../content/service-media.mjs';
+import { serviceHeaderImage, serviceCardTitle } from '../content/service-media.mjs';
 import { locationGuide, placeKinds } from '../content/location-pages.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -115,7 +115,7 @@ function breadcrumbs(lang,page) {
 function serviceCards(lang,ids=services.map(s=>s.id),region) {
   return `<div class="service-grid seo-service-grid">${ids.map(id=>{
     const s=services.find(item=>item.id===id), c=s[lang];
-    return `<article class="service-card ${s.featured?'featured':''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(lang,s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${serviceCardTitle(s,lang)}</a></h3><p>${esc(c.short)}</p><div class="service-card-bottom"><a class="service-details" href="${s.paths[lang]}">${t(lang,'cardDetails')}</a><a class="service-request" href="${esc(quote(lang,s.id,region))}" aria-label="${esc(t(lang,'requestService')+': '+c.title)}">${t(lang,'cardRequest')}</a></div></article>`;
+    return `<article class="service-card ${s.featured?'featured':''}"><div class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(lang,s.tag)}</span></div><h3><a href="${s.paths[lang]}">${serviceCardTitle(s,lang)}</a></h3><p>${esc(c.short)}</p><div class="service-card-bottom"><a class="service-details" href="${s.paths[lang]}">${t(lang,'cardDetails')}</a><a class="service-request" href="${esc(quote(lang,s.id,region))}" aria-label="${esc(t(lang,'requestService')+': '+c.title)}">${t(lang,'cardRequest')}</a></div></article>`;
   }).join('')}</div>`;
 }
 const list = items => `<ul class="seo-list">${items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>`;
@@ -197,7 +197,10 @@ function hubBody(key,lang) {
 async function renderPage(page,body) {
   for(const lang of ['bg','en']) {
     const meta=page[lang];
-    const html=`<!doctype html>\n<html lang="${lang}">\n${head(lang,page)}\n<body class="seo-page"><a class="skip-link" href="#main">${t(lang,'skip')}</a>\n${sprite}\n${header(lang,page.paths)}\n<main id="main"><div class="container">${breadcrumbs(lang,page)}<section class="seo-page-heading"><h1>${esc(meta.heading)}</h1><p class="seo-lead">${esc(meta.intro)}</p>${page.region ? `<div class="seo-heading-actions"><a class="button button-yellow" href="tel:+359878558152">${icon('phone')}${t(lang,'callNow')}</a><a class="button button-dark" href="${quote(lang,'tow',page.region)}">${t(lang,'freeQuote')}${icon('up-right')}</a></div>` : ''}</section>${body(lang)}</div></main>\n${footer(lang)}\n<div class="mobile-action-bar"><a href="tel:+359878558152" class="button button-yellow">${icon('phone')}${t(lang,'callNow')}</a><a class="button button-dark" href="${quote(lang,page.service,page.region)}">${t(lang,'freeQuote')}</a></div>\n</body>\n</html>\n`;
+    const heading = page.service
+      ? `<div class="service-page-hero">${serviceHeaderImage(services.find(service=>service.id===page.service),lang)}<h1>${esc(meta.heading)}</h1></div>`
+      : `<h1>${esc(meta.heading)}</h1>`;
+    const html=`<!doctype html>\n<html lang="${lang}">\n${head(lang,page)}\n<body class="seo-page"><a class="skip-link" href="#main">${t(lang,'skip')}</a>\n${sprite}\n${header(lang,page.paths)}\n<main id="main"><div class="container">${breadcrumbs(lang,page)}<section class="seo-page-heading">${heading}<p class="seo-lead">${esc(meta.intro)}</p>${page.region ? `<div class="seo-heading-actions"><a class="button button-yellow" href="tel:+359878558152">${icon('phone')}${t(lang,'callNow')}</a><a class="button button-dark" href="${quote(lang,'tow',page.region)}">${t(lang,'freeQuote')}${icon('up-right')}</a></div>` : ''}</section>${body(lang)}</div></main>\n${footer(lang)}\n<div class="mobile-action-bar"><a href="tel:+359878558152" class="button button-yellow">${icon('phone')}${t(lang,'callNow')}</a><a class="button button-dark" href="${quote(lang,page.service,page.region)}">${t(lang,'freeQuote')}</a></div>\n</body>\n</html>\n`;
     await save(page,lang,html);
   }
 }

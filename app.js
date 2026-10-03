@@ -1,4 +1,4 @@
-import { serviceImage, serviceCardTitle } from './content/service-media.mjs';
+import { serviceCardTitle } from './content/service-media.mjs';
 import { coverageBoundary } from './content/coverage-area.mjs';
 import { copy, services, regions, locations, faqs, paths, homeMeta } from './content/site-data.mjs';
 
@@ -23,7 +23,7 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   function renderServices() {
     $('#service-grid').innerHTML = services.map(item => {
       const s = serviceData(item.id);
-      return `<article class="service-card ${s.featured ? 'featured' : ''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${serviceCardTitle(s,lang)}</a></h3><p>${s.short}</p><div class="service-card-bottom"><button type="button" class="service-details" data-service-details="${s.id}" aria-label="${s.title} — ${t('allDetails')}">${t('cardDetails')}</button><button type="button" class="service-request" data-select-service="${s.id}" aria-label="${t('requestService')}: ${s.title}">${t('cardRequest')}</button></div></article>`;
+      return `<article class="service-card ${s.featured ? 'featured' : ''}"><div class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></div><h3><a href="${s.paths[lang]}">${serviceCardTitle(s,lang)}</a></h3><p>${s.short}</p><div class="service-card-bottom"><a class="service-details" href="${s.paths[lang]}">${t('cardDetails')}</a><button type="button" class="service-request" data-select-service="${s.id}" aria-label="${t('requestService')}: ${s.title}">${t('cardRequest')}</button></div></article>`;
     }).join('');
     $('#service-choices').innerHTML = services.map(item => {
       const s = serviceData(item.id);
@@ -100,10 +100,6 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
     dialog.dataset.kind = kind;
     if (!dialog.open) dialog.showModal();
     document.body.classList.add('dialog-open');
-  }
-  function showService(id) {
-    const s = serviceData(id);
-    openDialog(`<span class="dialog-content-icon">${icon(s.icon)}</span><h2>${s.title}</h2><p>${s.text}</p><ul>${s.points.map(point => `<li>${point}</li>`).join('')}</ul><p class="dialog-note">${t('availableNote')}</p><button type="button" class="button button-yellow" data-select-service="${id}">${t('requestService')}${icon('up-right')}</button><a class="button button-dark" href="tel:${phone}">${icon('phone')}0878 558 152</a>`, 'service');
   }
   function selectService(id) {
     state.service = services.some(item => item.id === id) ? id : 'tow';
@@ -312,8 +308,6 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   $$('#mobile-nav a').forEach(link => link.addEventListener('click', () => { $('#mobile-nav').hidden = true; $('.menu-button').setAttribute('aria-expanded', 'false'); }));
   document.addEventListener('keydown', event => { if (event.key === 'Escape') { $('#mobile-nav').hidden = true; $('.menu-button').setAttribute('aria-expanded', 'false'); } });
   $('#service-grid').addEventListener('click', event => {
-    const details = event.target.closest('[data-service-details]');
-    if (details) showService(details.dataset.serviceDetails);
     const request = event.target.closest('[data-select-service]');
     if (request) goToQuote(request.dataset.selectService);
   });

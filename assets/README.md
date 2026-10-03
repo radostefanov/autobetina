@@ -21,4 +21,4 @@ Final workspace assets:
 - `services/fuel.jpg` and `services/fuel-small.jpg`
 - `services/recovery.jpg` and `services/recovery-small.jpg`
 
-JPEG versions are 960 and 480 pixels wide, with responsive source selection, lazy loading and bilingual alt text identifying them as illustrations. Original generated PNGs remain in the imagegen output directory. Cards on the home, service and coverage pages use the same shared media template. Full-color photos sit above the text with large contrasting icon badges; phone cards use compact labels and link to full descriptions.
+JPEG versions are 960 and 480 pixels wide, with responsive source selection and bilingual alt text identifying them as illustrations. Original generated PNGs remain in the imagegen output directory. Each photograph appears as an eagerly loaded header on its service detail page. Cards on the home, service and coverage pages use service icons, compact mobile labels and visible short descriptions.
