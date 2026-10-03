@@ -23,7 +23,7 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   function renderServices() {
     $('#service-grid').innerHTML = services.map(item => {
       const s = serviceData(item.id);
-      return `<article class="service-card ${s.featured ? 'featured' : ''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${serviceCardTitle(s,lang)}</a></h3><p>${s.short}</p><div class="service-card-bottom"><a href="${s.paths[lang]}">${t('cardDetails')}</a><button type="button" class="icon-button" data-service-details="${s.id}" aria-label="${s.title} — ${t('allDetails')}">${icon('up-right')}</button></div></article>`;
+      return `<article class="service-card ${s.featured ? 'featured' : ''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${serviceCardTitle(s,lang)}</a></h3><p>${s.short}</p><div class="service-card-bottom"><button type="button" class="service-details" data-service-details="${s.id}" aria-label="${s.title} — ${t('allDetails')}">${t('cardDetails')}</button><button type="button" class="service-request" data-select-service="${s.id}" aria-label="${t('requestService')}: ${s.title}">${t('cardRequest')}</button></div></article>`;
     }).join('');
     $('#service-choices').innerHTML = services.map(item => {
       const s = serviceData(item.id);
@@ -116,7 +116,8 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
     if (id) selectService(id);
     if ($('#detail-dialog').open) $('#detail-dialog').close();
     setStep(1, false);
-    $('#quote').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const target = matchMedia('(max-width:1000px)').matches ? $('.quote-panel') : $('#quote');
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     const chosen = $(`input[name="service"][value="${state.service}"]`);
     if (chosen) chosen.focus({ preventScroll: true });
   }
@@ -310,7 +311,12 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   });
   $$('#mobile-nav a').forEach(link => link.addEventListener('click', () => { $('#mobile-nav').hidden = true; $('.menu-button').setAttribute('aria-expanded', 'false'); }));
   document.addEventListener('keydown', event => { if (event.key === 'Escape') { $('#mobile-nav').hidden = true; $('.menu-button').setAttribute('aria-expanded', 'false'); } });
-  $('#service-grid').addEventListener('click', event => { const button = event.target.closest('[data-service-details]'); if (button) showService(button.dataset.serviceDetails); });
+  $('#service-grid').addEventListener('click', event => {
+    const details = event.target.closest('[data-service-details]');
+    if (details) showService(details.dataset.serviceDetails);
+    const request = event.target.closest('[data-select-service]');
+    if (request) goToQuote(request.dataset.selectService);
+  });
   $('#service-choices').addEventListener('change', event => { if (event.target.name === 'service') selectService(event.target.value); });
   $('#quote-form').addEventListener('submit', event => { event.preventDefault(); if (state.step === 1) setStep(2); else if (state.step === 2 && validateDetails()) setStep(3); });
   $('#quote-form').addEventListener('input', event => {
@@ -362,6 +368,9 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   const requestedRegion = coveragePlaces.find(region => region.id === requestParams.get('region'));
   if (requestedRegion) $('#request-location').value = requestedRegion[lang];
   setStep(1, false);
+  if (location.hash === '#quote' && requestParams.has('service')) {
+    requestAnimationFrame(() => goToQuote(state.service));
+  }
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => { if (entries.some(entry => entry.isIntersecting)) { initializeMap(); observer.disconnect(); } }, { rootMargin: '100px' });
     observer.observe($('#coverage-map'));

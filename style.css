@@ -2234,21 +2234,19 @@ legend {
     gap:10px;
     flex-wrap:wrap
   }
-  .hero-buttons .button {
+  .hero-buttons .button,.hero-location {
     font-size:12px;
     padding:14px 18px;
     min-height:49px;
     gap:9px
   }
-  .hero-buttons .icon {
+  .hero-buttons .icon,.hero-location .icon {
     width:18px;
     height:18px
   }
   .hero-location {
-    font-size:13px;
     margin-top:14px;
-    width:100%;
-    min-height:49px
+    width:auto
   }
   .hero-footer {
     min-height:75px;
@@ -2746,7 +2744,7 @@ legend {
     flex-direction:column;
     align-items:stretch
   }
-  .hero-buttons .button {
+  .hero-buttons .button,.hero-location {
     width:100%
   }
   .hero-content {
@@ -2920,9 +2918,15 @@ legend {
 .service-card .service-icon { display:grid; place-items:center; width:56px; height:56px; padding:10px; color:var(--yellow); background:var(--ink); border:2px solid white; border-radius:10px; box-shadow:0 3px 10px #0005; }
 .service-card .service-icon .icon { width:32px; height:32px; stroke-width:1.9; }
 .service-card .service-tag { color:white; background:var(--ink); border-radius:4px; padding:6px 9px; }
-.service-card p { color:#4a5145; font-size:14px; line-height:1.65; margin-bottom:18px; }
+.service-card p { color:#4a5145; font-size:14px; line-height:1.65; margin-bottom:18px; overflow-wrap:anywhere; }
 .featured p { color:#3f371f; }
 .service-title-short { display:none; }
+.service-card-bottom { gap:10px; }
+.service-card-bottom .service-details,.service-card-bottom .service-request { display:inline-flex; align-items:center; justify-content:center; min-height:40px; font:inherit; font-weight:800; white-space:nowrap; border:0; }
+.service-card-bottom .service-details { padding:0; background:none; color:var(--ink); }
+.service-card-bottom .service-request { padding:0 16px; background:var(--ink); color:white; border-radius:5px; text-decoration:none; }
+.service-card-bottom .service-request:hover { background:#39442e; }
+.quote-panel { scroll-margin-top:115px; }
 
 @media(max-width:760px) {
   .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -2932,9 +2936,12 @@ legend {
   .service-card .service-icon { width:48px; height:48px; padding:8px; border-radius:8px; }
   .service-card .service-icon .icon { width:28px; height:28px; }
   .service-card h3 { font-size:16px; line-height:1.35; margin-bottom:12px; letter-spacing:-.3px; }
-  .service-title-full,.service-card p { display:none; }
+  .service-title-full { display:none; }
   .service-title-short { display:inline; }
   .service-card-bottom { font-size:12px; gap:6px; }
+  .service-card-bottom .service-details,.service-card-bottom .service-request { min-height:44px; }
+  .service-card-bottom .service-details { min-width:44px; }
+  .service-card-bottom .service-request { padding:0 8px; }
   .dialog[data-kind="location"] { width:calc(100% - 16px); max-width:none; max-height:calc(100dvh - 16px); padding:28px 20px 22px; }
   .dialog-location-heading { gap:12px; margin-bottom:18px; }
   .dialog-location-heading h2 { font-size:24px; }
@@ -2945,4 +2952,6 @@ legend {
 @media(max-width:360px) {
   .service-card { --card-pad-x:14px; }
   .service-card h3 { font-size:15px; }
+  .service-card-bottom { font-size:11px; gap:4px; }
+  .service-card-bottom .service-request { padding:0 7px; }
 }

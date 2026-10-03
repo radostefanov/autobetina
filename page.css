@@ -1,8 +1,7 @@
 /* Shared styles for crawlable service, coverage and company pages. */
 .index-link { margin-top: 25px; }
 .service-card h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.service-card-bottom > a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.service-card-bottom .icon-button { padding: 4px; min-width: 30px; min-height: 30px; }
+.service-card-bottom .service-details:hover { text-decoration: underline; text-underline-offset: 4px; }
 .service-card-bottom a { font-weight: 800; }
 .local-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 22px; }
 .local-links a { display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 1px solid var(--line); border-radius: 5px; padding: 14px; font-size: 13px; font-weight: 700; line-height: 1.6; background: white; }

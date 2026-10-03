@@ -66,7 +66,9 @@ Checked in the browser at desktop and mobile sizes: service dialog selection, re
 
 Service images and the location popup were checked in Bulgarian and English at desktop, 390-pixel and 320-pixel phone widths. A temporary local fixture with a public sample coordinate verified the location pin, compact coordinates, quote transfer, repeated opening, unavailable-map fallback and denied-GPS fallback.
 
-Service cards use full-color photographs above the text, with opaque charcoal-and-yellow icon badges over the photo. Compact mobile labels link to full service information. The home and English static service cards share the same layout.
+Service cards use full-color photographs above the text, with opaque charcoal-and-yellow icon badges over the photo. Compact mobile labels link to full service information, and short descriptions stay visible on phones. The home and English static service cards share the same layout. Description visibility, text wrapping and card actions were checked at 390- and 320-pixel phone widths in Bulgarian and English.
+
+Every service card has Details and Request actions. Homepage requests scroll to the quote form and select the service; cards on other pages link to the same form with the service prefilled. Area-page requests also retain the area. Browser checks covered all six service selections, the Details popup, Bulgarian / English links, Razliv location prefill, and compact action layouts at 390- and 320-pixel phone widths.
 
 The simplified home page was checked on desktop and at 390-pixel / 320-pixel phone widths in Bulgarian and English: section labels / numbers and “All services” links are absent, the consultation heading and link are centered, process icons render, and “Show your location” is a visible button. A temporary local sample-location fixture verified the popup retains its map, coordinates and accuracy without the redundant explanatory sentence.
 
