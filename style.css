@@ -596,7 +596,9 @@ input:focus,select:focus,textarea:focus {
   background:white;
   border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:27px;
+  --card-pad-x:27px;
+  --card-pad-y:27px;
+  padding:var(--card-pad-y) var(--card-pad-x);
   display:flex;
   flex-direction:column;
   position:relative;
@@ -1908,25 +1910,36 @@ legend {
   font-size:12px!important
 }
 
-.dialog-coordinates {
-  font-size:20px!important;
-  font-weight:800;
-  letter-spacing:.5px;
-  color:var(--ink)!important;
-  margin-bottom:7px!important
+.dialog[data-kind="location"] {
+  width:min(680px,calc(100% - 32px));
+  padding:32px;
 }
 
-.dialog-location-actions {
+.dialog-location-heading {
   display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin:18px 0
+  align-items:center;
+  gap:14px;
+  padding-right:25px;
+  margin-bottom:20px;
 }
 
-.dialog-location-actions .text-button {
-  font-size:12px;
-  padding:7px
-}
+.dialog-location-heading .dialog-content-icon { margin:0; padding:11px; flex-shrink:0; }
+.dialog-location-heading .dialog-content-icon .icon { width:25px; height:25px; }
+.dialog-location-heading h2 { margin:0; }
+.location-preview-wrap { position:relative; border:1px solid #d5dccb; border-radius:9px; overflow:hidden; background:#e6eada; }
+#location-preview-map { height:270px; width:100%; z-index:1; }
+.location-preview-fallback { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:25px; background:#e6eada; z-index:2; }
+.location-preview-fallback > .icon { width:32px; height:32px; margin-bottom:15px; color:#9a7400; }
+.location-preview-fallback p { max-width:350px; margin:0; }
+.dialog .dialog-coordinates { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:6px 12px; font-size:12px; font-weight:600; letter-spacing:.2px; color:var(--ink); margin:11px 0 14px; }
+.dialog-coordinates span:first-child { font-size:10px; color:var(--muted); letter-spacing:.8px; text-transform:uppercase; }
+.dialog p.location-caption { font-size:13px; margin-bottom:8px; }
+.dialog-location-actions { display:flex; gap:10px; flex-wrap:wrap; margin:8px 0 14px; }
+.dialog-location-actions .text-button { font-size:12px; padding:7px 0; }
+.dialog-location-actions .text-button + .text-button { margin-left:auto; }
+.dialog-location-buttons { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.dialog-location-buttons .button { margin:0; font-size:12px; padding:14px 12px; gap:8px; }
+.dialog p.location-sms-note { font-size:11px; margin:16px 0 0; }
 
 .dialog-input {
   display:block;
@@ -2067,7 +2080,8 @@ legend {
     font-size:13px
   }
   .service-card {
-    padding:23px;
+    --card-pad-x:23px;
+    --card-pad-y:23px;
     min-height:250px
   }
   .service-card h3 {
@@ -2303,7 +2317,8 @@ legend {
     gap:12px
   }
   .service-card {
-    padding:21px 17px;
+    --card-pad-x:17px;
+    --card-pad-y:21px;
     min-height:238px
   }
   .service-card-top {
@@ -2886,7 +2901,8 @@ legend {
     font-size:12px
   }
   .service-card {
-    padding:22px 16px
+    --card-pad-x:16px;
+    --card-pad-y:22px
   }
   .no-charge {
     font-size:10px
@@ -2894,4 +2910,25 @@ legend {
   .field-note {
     font-size:12px
   }
+}
+
+/* Service photographs share the header's twilight and yellow palette. */
+.service-card-media { position:relative; flex-shrink:0; aspect-ratio:2 / 1; margin:calc(-1 * var(--card-pad-y)) calc(-1 * var(--card-pad-x)) 23px; overflow:hidden; border-radius:calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; background:#25303a; }
+.service-image { display:block; width:100%; height:100%; object-fit:cover; }
+.service-card-media::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,#111a24b0,transparent 65%); pointer-events:none; }
+.service-card-media .service-card-top { position:absolute; left:16px; right:16px; bottom:14px; margin:0; z-index:1; }
+.service-card-media .service-icon { background:#1f252be6; color:#f5c518; padding:9px; border:1px solid #ffffff20; backdrop-filter:blur(6px); }
+.service-card-media .service-icon .icon { width:23px; height:23px; }
+.service-card-media .service-tag { color:white; background:#1f252bcc; border:1px solid #ffffff20; padding:6px 9px; border-radius:4px; }
+
+@media(max-width:760px) {
+  .service-card-media { margin-bottom:18px; }
+  .service-card-media .service-card-top { left:10px; right:10px; bottom:10px; }
+  .service-card-media .service-icon { padding:7px; }
+  .service-card-media .service-icon .icon { width:20px; height:20px; }
+  .dialog[data-kind="location"] { width:calc(100% - 16px); max-width:none; max-height:calc(100dvh - 16px); padding:28px 20px 22px; }
+  .dialog-location-heading { gap:12px; margin-bottom:18px; }
+  .dialog-location-heading h2 { font-size:24px; }
+  #location-preview-map { height:clamp(230px,30dvh,280px); }
+  .dialog-location-buttons { grid-template-columns:1fr; }
 }

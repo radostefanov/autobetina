@@ -152,6 +152,9 @@ export const copy = {
     "finding": "Определяме местоположението…",
     "findingText": "Разрешете достъп до GPS, ако браузърът ви попита. Локацията се споделя само когато изпратите съобщението.",
     "locationReady": "Ето къде се намирате.",
+    "locationMapLabel": "Карта на избраното местоположение",
+    "locationCoordinates": "GPS координати",
+    "locationMapUnavailable": "Прегледът на картата не е достъпен. Можете да копирате или изпратите локацията.",
     "locationApprox": "GPS координати. Проверете точката преди изпращане.",
     "locationAdded": "Местоположението е добавено към заявката.",
     "locationTitle": "Споделете вашето място",
@@ -178,7 +181,7 @@ export const copy = {
       "GPS се използва само след ваше действие и разрешение. Координатите се добавят към SMS само ако го изберете.",
       "SMS и телефонните разговори се извършват през приложенията на устройството ви. Сайтът не ги изпраща автоматично.",
       "Изборът на език се запазва локално на вашето устройство. Не използваме аналитични или рекламни бисквитки.",
-      "Картата зарежда изображения от OpenStreetMap, когато стигнете до нея. Доставчикът получава обичайните мрежови данни, включително IP адреса ви."
+      "Картата зарежда изображения от OpenStreetMap, когато е видима или отворите преглед на локацията. Доставчикът получава обичайните мрежови данни, включително IP адреса ви."
     ],
     "privacyContact": "За въпроси към Бетина 97: 0878 558 152 или 0887 558 150.",
     "privacyMapLink": "Поверителност на OpenStreetMap",
@@ -344,6 +347,9 @@ export const copy = {
     "finding": "Finding your location…",
     "findingText": "Allow GPS access if your browser asks. Your location is shared only when you send the message.",
     "locationReady": "Here is your location.",
+    "locationMapLabel": "Map of your selected location",
+    "locationCoordinates": "GPS coordinates",
+    "locationMapUnavailable": "Map preview unavailable. You can still copy or send your location.",
     "locationApprox": "GPS coordinates. Check the point before sending.",
     "locationAdded": "Location added to your request.",
     "locationTitle": "Share your location",
@@ -370,7 +376,7 @@ export const copy = {
       "GPS is used only after your action and permission. Coordinates are included in an SMS only when you choose to do so.",
       "SMS and calls use the apps on your device. The website does not send them automatically.",
       "Your language choice is saved locally on your device. We do not use analytics or advertising cookies.",
-      "The map loads images from OpenStreetMap when you scroll to it. The provider receives normal network information, including your IP address."
+      "The map loads images from OpenStreetMap when it is visible or you open a location preview. The provider receives normal network information, including your IP address."
     ],
     "privacyContact": "For questions, contact Betina 97: +359 878 558 152 or +359 887 558 150.",
     "privacyMapLink": "OpenStreetMap privacy policy",
@@ -391,6 +397,15 @@ export const copy = {
 export const services = [
   {
     "id": "tow",
+    "image": {
+      "src": "/assets/services/tow.jpg",
+      "small": "/assets/services/tow-small.jpg",
+      "height": 480,
+      "alt": {
+        "bg": "Илюстрация: жълт репатрак превозва автомобил на планински път.",
+        "en": "Illustration: a yellow tow truck carrying a car on a mountain road."
+      }
+    },
     "icon": "truck",
     "tag": "service24",
     "featured": true,
@@ -421,6 +436,15 @@ export const services = [
   },
   {
     "id": "tire",
+    "image": {
+      "src": "/assets/services/tire.jpg",
+      "small": "/assets/services/tire-small.jpg",
+      "height": 640,
+      "alt": {
+        "bg": "Илюстрация: смяна на автомобилна гума край пътя.",
+        "en": "Illustration: a roadside tire change."
+      }
+    },
     "icon": "tire",
     "tag": "onSite",
     "bg": {
@@ -450,6 +474,15 @@ export const services = [
   },
   {
     "id": "battery",
+    "image": {
+      "src": "/assets/services/battery.jpg",
+      "small": "/assets/services/battery-small.jpg",
+      "height": 640,
+      "alt": {
+        "bg": "Илюстрация: преносимо стартово устройство и автомобилен акумулатор.",
+        "en": "Illustration: a portable jump starter and car battery."
+      }
+    },
     "icon": "battery",
     "tag": "onSite",
     "bg": {
@@ -479,6 +512,15 @@ export const services = [
   },
   {
     "id": "express",
+    "image": {
+      "src": "/assets/services/express.jpg",
+      "small": "/assets/services/express-small.jpg",
+      "height": 480,
+      "alt": {
+        "bg": "Илюстрация: автомобил за пътна помощ до аварирал автомобил.",
+        "en": "Illustration: a roadside assistance vehicle beside a stranded car."
+      }
+    },
     "icon": "bolt",
     "tag": "onRequest",
     "bg": {
@@ -508,6 +550,15 @@ export const services = [
   },
   {
     "id": "fuel",
+    "image": {
+      "src": "/assets/services/fuel.jpg",
+      "small": "/assets/services/fuel-small.jpg",
+      "height": 640,
+      "alt": {
+        "bg": "Илюстрация: зареждане на автомобил с преносима туба за гориво.",
+        "en": "Illustration: refuelling a car with a portable fuel can."
+      }
+    },
     "icon": "fuel",
     "tag": "onRequest",
     "bg": {
@@ -537,6 +588,15 @@ export const services = [
   },
   {
     "id": "recovery",
+    "image": {
+      "src": "/assets/services/recovery.jpg",
+      "small": "/assets/services/recovery-small.jpg",
+      "height": 480,
+      "alt": {
+        "bg": "Илюстрация: извличане на автомобил с лебедка и платформа.",
+        "en": "Illustration: vehicle recovery with a winch and flatbed."
+      }
+    },
     "icon": "wrench",
     "tag": "onRequest",
     "bg": {

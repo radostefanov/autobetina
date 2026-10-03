@@ -7,3 +7,18 @@ Final generation prompt:
 > Use case: photorealistic-natural. Asset type: website hero background for a Bulgarian roadside assistance business, auto-betina.com. Primary request: editorial photograph of a yellow flatbed recovery truck helping a dark passenger car on a quiet mountain highway in the Balkan mountains of Bulgaria, at blue hour. Scene: layered forested Balkan mountain ridges, pale soft evening sky, asphalt and roadside crash barrier. Truck is modern but realistic, no visible brand names, no lettering, no visible license plate digits. Composition: ultra wide horizontal photograph, main yellow truck entirely within the right 55 percent of frame facing right in a three quarter side view, truck occupies lower right, generous dark open mountain/road negative space on the entire left for white website text; background not overly busy, clean and understated. Dark graphite shadows with rich mustard yellow truck and amber running lights. Tasteful cinematic editorial photography with natural plausible detail. No text, no logos, no watermarks, no people, no UI, no extreme effects. Output landscape 1536x1024 or wider.
 
 `favicon.svg` is a project-native chevron mark using the website's yellow and charcoal colors. Manrope variable font subsets are self-hosted; their SIL Open Font License is included in `manrope-OFL.txt`.
+
+## Service illustrations
+
+Six service images were created with the built-in imagegen tool in the same mountain-road, blue-hour, mustard-yellow and charcoal style as the header. They are illustrations, not photographs of the company's actual staff, vehicles or completed jobs. The exact prompt set is saved in [service-image-prompts.json](service-image-prompts.json).
+
+Final workspace assets:
+
+- `services/tow.jpg` and `services/tow-small.jpg`
+- `services/tire.jpg` and `services/tire-small.jpg`
+- `services/battery.jpg` and `services/battery-small.jpg`
+- `services/express.jpg` and `services/express-small.jpg`
+- `services/fuel.jpg` and `services/fuel-small.jpg`
+- `services/recovery.jpg` and `services/recovery-small.jpg`
+
+JPEG versions are 960 and 480 pixels wide, with responsive source selection, lazy loading and bilingual alt text identifying them as illustrations. Original generated PNGs remain in the imagegen output directory. Cards on the home, service and coverage pages use the same shared media template.

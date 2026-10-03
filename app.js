@@ -1,3 +1,4 @@
+import { serviceImage } from './content/service-media.mjs';
 import { coverageBoundary } from './content/coverage-area.mjs';
 import { copy, services, regions, locations, faqs, paths, homeMeta } from './content/site-data.mjs';
 
@@ -11,6 +12,7 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   const coveragePlaces = [...regions, ...locations];
   let lang = document.documentElement.lang === 'en' ? 'en' : 'bg';
   const state = { service: 'tow', step: 1, map: null, selectedPoint: null, requestPoint: null, requestLocationText: '', activeRegion: 0, markers: [], userMarker: null, message: '', toastTimer: null, locationRequest: 0, dialogKind: null };
+  let locationPreviewMap = null;
   const t = key => copy[lang][key] ?? copy.bg[key] ?? key;
 
   const serviceData = id => {
@@ -21,7 +23,7 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   function renderServices() {
     $('#service-grid').innerHTML = services.map(item => {
       const s = serviceData(item.id);
-      return `<article class="service-card ${s.featured ? 'featured' : ''}"><span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></span><h3><a href="${s.paths[lang]}">${s.title}</a></h3><p>${s.short}</p><div class="service-card-bottom"><a href="${s.paths[lang]}">${t('details')}</a><button type="button" class="icon-button" data-service-details="${s.id}" aria-label="${s.title} — ${t('allDetails')}">${icon('up-right')}</button></div></article>`;
+      return `<article class="service-card ${s.featured ? 'featured' : ''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${s.title}</a></h3><p>${s.short}</p><div class="service-card-bottom"><a href="${s.paths[lang]}">${t('details')}</a><button type="button" class="icon-button" data-service-details="${s.id}" aria-label="${s.title} — ${t('allDetails')}">${icon('up-right')}</button></div></article>`;
     }).join('');
     $('#service-choices').innerHTML = services.map(item => {
       const s = serviceData(item.id);
@@ -89,11 +91,13 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
     state.toastTimer = setTimeout(() => { toast.hidden = true; }, 4500);
   }
   function openDialog(html, kind) {
+    destroyLocationPreview();
     state.dialogKind = kind;
     $('#dialog-content').innerHTML = html;
     const heading = $('#dialog-content h2');
     if (heading) { heading.id = 'dialog-title'; $('#detail-dialog').setAttribute('aria-labelledby', 'dialog-title'); }
     const dialog = $('#detail-dialog');
+    dialog.dataset.kind = kind;
     if (!dialog.open) dialog.showModal();
     document.body.classList.add('dialog-open');
   }
@@ -239,7 +243,28 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   }
   function showLocationDialog(point, accuracy) {
     const text = `${t('locationMessage')}\n${coordinates(point)}\n${mapUrl(point)}`;
-    openDialog(`<span class="dialog-content-icon">${icon('locate')}</span><h2>${t('locationReady')}</h2><p class="dialog-coordinates">${coordinates(point)}</p><p>${t('locationApprox')}${Number.isFinite(accuracy) ? `<br>${t('gpsAccuracy')}: ${Math.round(accuracy)} ${t('meters')}.` : ''}</p><div class="dialog-location-actions"><a class="text-button" href="${mapUrl(point)}" target="_blank" rel="noopener">${icon('pin')}${t('viewOnMap')}</a><button type="button" class="text-button" id="copy-location">${icon('copy')}${t('copyLocation')}</button></div><a class="button button-yellow" href="${smsUrl(text)}">${icon('message')}${t('sendLocation')}</a><button type="button" class="button button-dark" id="location-for-quote">${t('useForQuote')}${icon('up-right')}</button><p class="field-note" style="margin-top:18px">${t('locationSmsNote')}</p>`, 'location');
+    openDialog(`<div class="dialog-location-heading"><span class="dialog-content-icon">${icon('locate')}</span><h2>${t('locationReady')}</h2></div><div class="location-preview-wrap"><div id="location-preview-map" role="region" aria-label="${t('locationMapLabel')}"></div><div class="location-preview-fallback" id="location-preview-fallback" hidden>${icon('pin')}<p>${t('locationMapUnavailable')}</p></div></div><p class="dialog-coordinates"><span>${t('locationCoordinates')}</span><span>${coordinates(point)}</span></p><p class="location-caption">${t('locationApprox')}${Number.isFinite(accuracy) ? `<br>${t('gpsAccuracy')}: ${Math.round(accuracy)} ${t('meters')}.` : ''}</p><div class="dialog-location-actions"><a class="text-button" href="${mapUrl(point)}" target="_blank" rel="noopener">${icon('pin')}${t('viewOnMap')}</a><button type="button" class="text-button" id="copy-location">${icon('copy')}${t('copyLocation')}</button></div><div class="dialog-location-buttons"><a class="button button-yellow" href="${smsUrl(text)}">${icon('message')}${t('sendLocation')}</a><button type="button" class="button button-dark" id="location-for-quote">${t('useForQuote')}${icon('up-right')}</button></div><p class="field-note location-sms-note">${t('locationSmsNote')}</p>`, 'location');
+    initializeLocationPreview(point, accuracy);
+  }
+  function destroyLocationPreview() {
+    locationPreviewMap?.remove();
+    locationPreviewMap = null;
+  }
+  function initializeLocationPreview(point, accuracy) {
+    const fallback = $('#location-preview-fallback');
+    if (!window.L) { fallback.hidden = false; return; }
+    const preview = locationPreviewMap = L.map('location-preview-map', {scrollWheelZoom:false}).setView([point.lat, point.lng], 15);
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'});
+    let loaded = 0, failed = 0;
+    tiles.on('tileload', () => { loaded++; fallback.hidden = true; });
+    tiles.on('tileerror', () => { if (++failed >= 3 && loaded === 0) fallback.hidden = false; });
+    tiles.addTo(preview);
+    if (Number.isFinite(accuracy) && accuracy > 0) {
+      const circle = L.circle([point.lat, point.lng], {radius:accuracy, color:'#ad8300', weight:1, fillColor:'#f5c518', fillOpacity:.15, interactive:false}).addTo(preview);
+      if (accuracy > 500) preview.fitBounds(circle.getBounds(), {padding:[20,20], maxZoom:15, animate:false});
+    }
+    L.marker([point.lat, point.lng], {title:t('locationTitle'), icon:L.divIcon({className:'', html:'<div class="user-marker"></div>', iconSize:[19,19], iconAnchor:[9,9]})}).addTo(preview);
+    requestAnimationFrame(() => { if (locationPreviewMap === preview && $('#detail-dialog').open) preview.invalidateSize(); });
   }
   function locate(action, button) {
     const request = ++state.locationRequest;
@@ -308,7 +333,7 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   $('#use-map-location').addEventListener('click', () => { if (state.selectedPoint) { usePointInRequest(state.selectedPoint); goToQuote(); setStep(2); } });
   $$('[data-location-action]').forEach(button => button.addEventListener('click', () => locate(button.dataset.locationAction, button)));
   $('#detail-dialog .dialog-close').addEventListener('click', () => $('#detail-dialog').close());
-  $('#detail-dialog').addEventListener('close', () => { document.body.classList.remove('dialog-open'); state.dialogKind = null; });
+  $('#detail-dialog').addEventListener('close', () => { destroyLocationPreview(); document.body.classList.remove('dialog-open'); state.dialogKind = null; });
   $('#detail-dialog').addEventListener('click', event => {
     const dialog = $('#detail-dialog');
     if (event.target === dialog) {

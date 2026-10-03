@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { copy, services, regions, locations, faqs, paths, homeMeta } from '../content/site-data.mjs';
 import { serviceGuides, regionGuides } from '../content/seo-content.mjs';
+import { serviceImage } from '../content/service-media.mjs';
 import { locationGuide, placeKinds } from '../content/location-pages.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -113,7 +114,7 @@ function breadcrumbs(lang,page) {
 function serviceCards(lang,ids=services.map(s=>s.id)) {
   return `<div class="service-grid seo-service-grid">${ids.map(id=>{
     const s=services.find(item=>item.id===id), c=s[lang];
-    return `<article class="service-card ${s.featured?'featured':''}"><span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(lang,s.tag)}</span></span><h3><a href="${s.paths[lang]}">${esc(c.title)}</a></h3><p>${esc(c.short)}</p><a class="service-card-bottom" href="${s.paths[lang]}"><span>${t(lang,'details')}</span>${icon('up-right')}</a></article>`;
+    return `<article class="service-card ${s.featured?'featured':''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(lang,s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${esc(c.title)}</a></h3><p>${esc(c.short)}</p><a class="service-card-bottom" href="${s.paths[lang]}"><span>${t(lang,'details')}</span>${icon('up-right')}</a></article>`;
   }).join('')}</div>`;
 }
 const list = items => `<ul class="seo-list">${items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>`;
