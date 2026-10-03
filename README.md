@@ -1,6 +1,6 @@
 # Auto Betina — Бетина 97
 
-A responsive Bulgarian / English website for the roadside assistance company, compatible with the existing static hosting at [auto-betina.com](https://auto-betina.com/). No package installation, build step, API key, or backend is required.
+A responsive Bulgarian / English website for the roadside assistance company, compatible with the existing static hosting at [auto-betina.com](https://auto-betina.com/). The generated pages are ready to serve: no package installation, API key, or backend is required. Node.js is only needed to regenerate pages after editing the content sources.
 
 ## Preview
 
@@ -15,10 +15,12 @@ Open [the local website](http://127.0.0.1:4173/). GPS and clipboard features nee
 ## Features
 
 - Six service descriptions with detail dialogs and service selection: towing, tire assistance, battery assistance, express visits, fuel delivery, and vehicle recovery / transport.
+- Dedicated, linked pages for services, coverage areas, company information, FAQs, and contacts: 16 Bulgarian pages and 16 English equivalents. Page content and navigation are available without JavaScript.
 - Interactive Leaflet / OpenStreetMap coverage map, town controls, point selection, and GPS location. Arrow keys pan a focused map; Enter selects its center. Town markers represent service areas, not fleet positions or an office address.
 - Three-step free quote preparation, input validation, vehicle type, destination, notes, and priority request. The visitor reviews and sends a prepared SMS, or copies the details and calls. Nothing is sent automatically.
 - Mobile call / location bar, FAQs, downloadable vCard, Bulgarian / English switching, privacy information, structured business metadata, sitemap, and custom favicon.
 - Self-hosted fonts, map library, and hero image; the live map tiles are the only third-party runtime dependency.
+- Unique page titles and descriptions, canonical URLs, reciprocal language annotations, breadcrumbs, business / service structured data, and a bilingual XML sitemap. See [SEO.md](SEO.md) for the page structure and indexing notes.
 
 ## Content and operational limits
 
@@ -41,10 +43,19 @@ Request details exist only in current-page memory; reloading clears them. Local 
 
 Serve this directory as static files, retaining `CNAME` and the existing Google verification file. The repository's current hosting can serve the redesign directly. No deployment or domain change has been performed by this task.
 
-Core files: `index.html` (layout / metadata), `style.css` (responsive design), `app.js` (copy / interactions / translations), and `assets/` (fonts / branding / image). Phone numbers are present in the HTML metadata, call links, and the `phone` constant in `app.js` and `assets/betina-97.vcf`; update all of those if the company changes its contact details.
+Edit `content/home-template.html` for the homepage layout, `content/site-data.mjs` for shared translations / services / regions, and `content/seo-content.mjs` for the service and regional guides. `tools/build-seo.mjs` contains the secondary page templates and metadata. `style.css` and `page.css` control the design; `app.js` and `page.js` control interactions. Regenerate all HTML files and the sitemap after changing source content:
+
+```sh
+node tools/build-seo.mjs
+python3 tools/check-seo.py
+```
+
+Serve and deploy the generated directories along with root files and assets. Do not edit generated `index.html` files directly; regeneration replaces them. Phone numbers also appear in builder metadata / call links, the `phone` constant in `app.js`, and `assets/betina-97.vcf`; update all of those if contact details change.
 
 Before publishing, the business should confirm the availability of tire, battery, fuel, and priority services. To add automatic dispatch, callback requests, or a live fleet location, connect an actual operational backend rather than simulating confirmation.
 
 ## Verification
 
 Checked in the browser at desktop and mobile sizes: service dialog selection, required fields / invalid phone validation, safely displayed input, map point to SMS transfer, language switching while preserving form state, and absence of horizontal scrolling. SMS links were inspected without sending a message. Actual telephone calls, SMS delivery, and real-device GPS permission / accuracy were not exercised.
+
+The SEO validator checks all 32 generated pages for unique metadata, canonical URLs, reciprocal language links, one H1, schema consistency, duplicate IDs, local assets, internal links / fragments, orphan pages, and static homepage service / FAQ content. Use `python3 tools/check-seo.py --http-origin http://127.0.0.1:4173` while the local preview runs to also verify HTTP responses. Browser checks cover service and region navigation, English equivalents, preselected quote shortcuts, retained form state when changing language, and responsive secondary pages.

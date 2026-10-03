@@ -1,6 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://auto-betina.com/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/uslugi/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/rayoni/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/coverage/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/za-nas/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/za-nas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/za-nas/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/za-nas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/za-nas/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/vuprosi/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/vuprosi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/vuprosi/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/vuprosi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/vuprosi/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/kontakti/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/kontakti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/kontakti/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/kontakti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/kontakti/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/uslugi/patna-pomosht-i-repatrak/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/patna-pomosht-i-repatrak/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/towing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/patna-pomosht-i-repatrak/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/services/towing/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/patna-pomosht-i-repatrak/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/towing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/patna-pomosht-i-repatrak/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/uslugi/remont-i-smyana-na-gumi/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/remont-i-smyana-na-gumi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/tire-assistance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/remont-i-smyana-na-gumi/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/services/tire-assistance/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/remont-i-smyana-na-gumi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/tire-assistance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/remont-i-smyana-na-gumi/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/uslugi/podavane-na-tok/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/podavane-na-tok/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/battery-assistance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/podavane-na-tok/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/services/battery-assistance/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/podavane-na-tok/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/battery-assistance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/podavane-na-tok/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/uslugi/ekspresna-pomosht/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/ekspresna-pomosht/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/express-assistance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/ekspresna-pomosht/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/services/express-assistance/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/ekspresna-pomosht/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/express-assistance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/ekspresna-pomosht/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/uslugi/dostavka-na-gorivo/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/dostavka-na-gorivo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/fuel-delivery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/dostavka-na-gorivo/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/services/fuel-delivery/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/dostavka-na-gorivo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/fuel-delivery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/dostavka-na-gorivo/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/uslugi/izvlichane-i-transport/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/izvlichane-i-transport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/vehicle-recovery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/izvlichane-i-transport/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/services/vehicle-recovery/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/uslugi/izvlichane-i-transport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/services/vehicle-recovery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/uslugi/izvlichane-i-transport/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/rayoni/botevgrad/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/botevgrad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/botevgrad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/botevgrad/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/coverage/botevgrad/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/botevgrad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/botevgrad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/botevgrad/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/rayoni/pravets/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/pravets/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/pravets/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/pravets/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/coverage/pravets/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/pravets/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/pravets/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/pravets/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/rayoni/mezdra/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/mezdra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/mezdra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/mezdra/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/coverage/mezdra/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/mezdra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/mezdra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/mezdra/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/rayoni/hemus/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/hemus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/hemus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/hemus/"/>
+  </url>
+  <url>
+    <loc>https://auto-betina.com/en/coverage/hemus/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://auto-betina.com/rayoni/hemus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auto-betina.com/en/coverage/hemus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auto-betina.com/rayoni/hemus/"/>
   </url>
 </urlset>

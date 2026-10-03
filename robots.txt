@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
+Disallow: /content/home-template.html
 
 Sitemap: https://auto-betina.com/sitemap.xml
