@@ -24,7 +24,7 @@ export const copy = {
     "heroDescription": "Повреда, спукана гума или изтощен акумулатор? Един разговор е първата стъпка обратно на пътя.",
     "callNow": "Обадете се сега",
     "freeQuote": "Безплатна оферта",
-    "shareLocation": "Споделете местоположение",
+    "showLocation": "Покажете локацията си",
     "discover": "Как можем да помогнем",
     "trust1": "24 часа. 7 дни.",
     "trust1Sub": "Помощта не чака работно време.",
@@ -126,6 +126,7 @@ export const copy = {
     "notesPlaceholder": "Марка, модел, повреда… (по желание)",
     "close": "Затвори",
     "details": "Вижте услугата",
+    "cardDetails": "Детайли",
     "service24": "24/7",
     "onSite": "НА МЯСТО",
     "onRequest": "ПО ЗАЯВКА",
@@ -155,7 +156,6 @@ export const copy = {
     "locationMapLabel": "Карта на избраното местоположение",
     "locationCoordinates": "GPS координати",
     "locationMapUnavailable": "Прегледът на картата не е достъпен. Можете да копирате или изпратите локацията.",
-    "locationApprox": "GPS координати. Проверете точката преди изпращане.",
     "locationAdded": "Местоположението е добавено към заявката.",
     "locationTitle": "Споделете вашето място",
     "locationError": "GPS не е достъпен.",
@@ -222,7 +222,7 @@ export const copy = {
     "heroAlt": "Yellow recovery truck on a mountain road — illustrative image",
     "callNow": "Call us now",
     "freeQuote": "Get a free quote",
-    "shareLocation": "Share your location",
+    "showLocation": "Show your location",
     "discover": "Explore our services",
     "trust1": "24 hours. 7 days.",
     "trust1Sub": "Help does not keep office hours.",
@@ -320,6 +320,7 @@ export const copy = {
     "backToTop": "Back to top ↑",
     "myLocation": "Location",
     "details": "View service",
+    "cardDetails": "Details",
     "service24": "24/7",
     "onSite": "AT YOUR LOCATION",
     "onRequest": "ON REQUEST",
@@ -350,7 +351,6 @@ export const copy = {
     "locationMapLabel": "Map of your selected location",
     "locationCoordinates": "GPS coordinates",
     "locationMapUnavailable": "Map preview unavailable. You can still copy or send your location.",
-    "locationApprox": "GPS coordinates. Check the point before sending.",
     "locationAdded": "Location added to your request.",
     "locationTitle": "Share your location",
     "locationError": "GPS is unavailable.",
@@ -411,6 +411,7 @@ export const services = [
     "featured": true,
     "bg": {
       "title": "Пътна помощ и репатрак",
+      "cardTitle": "Репатрак",
       "short": "Безопасен превоз на аварирал автомобил до избрано от вас място.",
       "text": "Когато автомобилът не може да продължи, организираме транспортирането му с платформа. Уточняваме мястото, състоянието на автомобила и крайната точка по телефон.",
       "points": [
@@ -421,6 +422,7 @@ export const services = [
     },
     "en": {
       "title": "Roadside help & towing",
+      "cardTitle": "Tow truck",
       "short": "Careful transport of your stranded vehicle to your chosen destination.",
       "text": "When your vehicle cannot continue, we arrange transport on a flatbed. We confirm the location, condition of the vehicle and destination by phone.",
       "points": [
@@ -449,6 +451,7 @@ export const services = [
     "tag": "onSite",
     "bg": {
       "title": "Ремонт и смяна на гуми",
+      "cardTitle": "Помощ за гуми",
       "short": "Смяна с резервна гума или съдействие за ремонт в сервиз.",
       "text": "Спукана гума не означава край на пътуването. Обсъждаме дали може да се постави изправна резервна гума на място или е необходим превоз до сервиз за гуми.",
       "points": [
@@ -459,6 +462,7 @@ export const services = [
     },
     "en": {
       "title": "Tire repair & replacement",
+      "cardTitle": "Tire help",
       "short": "Help fitting your spare or arranging a repair at a tire workshop.",
       "text": "A flat tire does not have to end your journey. We discuss whether a suitable spare can be fitted at your location or transport to a tire workshop is needed.",
       "points": [
@@ -487,6 +491,7 @@ export const services = [
     "tag": "onSite",
     "bg": {
       "title": "Подаване на ток",
+      "cardTitle": "Подаване на ток",
       "short": "Съдействие при изтощен акумулатор и проблем със стартирането.",
       "text": "Ако автомобилът не пали, опишете симптомите и модела по телефона. Уточняваме дали подаването на ток е подходящо, или е необходима друга помощ.",
       "points": [
@@ -497,6 +502,7 @@ export const services = [
     },
     "en": {
       "title": "Battery & starting help",
+      "cardTitle": "Jump start",
       "short": "Assistance with a flat battery or a vehicle that will not start.",
       "text": "Tell us the symptoms and your vehicle model by phone. We discuss whether a jump-start is appropriate or another type of assistance is needed.",
       "points": [
@@ -525,6 +531,7 @@ export const services = [
     "tag": "onRequest",
     "bg": {
       "title": "Експресна помощ",
+      "cardTitle": "Експресна помощ",
       "short": "Заявете приоритетно посещение, когато времето е от значение.",
       "text": "Когато ситуацията е спешна, обадете се директно. Ще проверим възможността за приоритетно посещение и ще уточним време и цена преди тръгване.",
       "points": [
@@ -535,6 +542,7 @@ export const services = [
     },
     "en": {
       "title": "Express assistance",
+      "cardTitle": "Express help",
       "short": "Request a priority visit when time is especially important.",
       "text": "For an urgent situation, call us directly. We check the possibility of a priority visit and discuss timing and price before setting out.",
       "points": [
@@ -563,6 +571,7 @@ export const services = [
     "tag": "onRequest",
     "bg": {
       "title": "Доставка на гориво",
+      "cardTitle": "Доставка на гориво",
       "short": "Обсъдете съдействие, ако сте останали без гориво на пътя.",
       "text": "Кажете ни точното място, вида гориво и автомобила. Проверяваме дали можем да съдействаме с доставка, или е нужно друго решение за ситуацията.",
       "points": [
@@ -573,6 +582,7 @@ export const services = [
     },
     "en": {
       "title": "Fuel delivery",
+      "cardTitle": "Fuel delivery",
       "short": "Discuss assistance if you have run out of fuel on the road.",
       "text": "Tell us your exact location, fuel type and vehicle. We check whether delivery is available or a different solution is needed.",
       "points": [
@@ -597,10 +607,11 @@ export const services = [
         "en": "Illustration: vehicle recovery with a winch and flatbed."
       }
     },
-    "icon": "wrench",
+    "icon": "recovery",
     "tag": "onRequest",
     "bg": {
       "title": "Извличане и транспорт",
+      "cardTitle": "Извличане",
       "short": "Съдействие за заседнали автомобили и специализиран превоз.",
       "text": "При заседнал или блокирал автомобил описанието на мястото е особено важно. По телефон уточняваме достъпа, състоянието и подходящото оборудване.",
       "points": [
@@ -611,6 +622,7 @@ export const services = [
     },
     "en": {
       "title": "Recovery & transport",
+      "cardTitle": "Vehicle recovery",
       "short": "Assistance with stuck vehicles and arranged vehicle transport.",
       "text": "For a stuck or immobilized vehicle, the location and access matter. We discuss the conditions, vehicle state and appropriate equipment by phone.",
       "points": [
@@ -712,7 +724,7 @@ export const faqs = {
     ],
     [
       "Как да ви изпратя точното си местоположение?",
-      "Натиснете „Споделете местоположение“ или използвайте картата. Сайтът подготвя координати и линк към карта, които можете да копирате или изпратите като SMS. При отказан GPS въведете град, път, километър или ориентир."
+      "Натиснете „Покажете локацията си“ или използвайте картата. Сайтът подготвя координати и линк към карта, които можете да копирате или изпратите като SMS. При отказан GPS въведете град, път, километър или ориентир."
     ],
     [
       "Изпраща ли се заявката автоматично?",
@@ -742,7 +754,7 @@ export const faqs = {
     ],
     [
       "How can I send my exact location?",
-      "Use “Share your location” or select a point on the map. The website prepares coordinates and a map link to copy or send by SMS. If GPS is denied, enter a town, road, kilometer or landmark."
+      "Use “Show your location” or select a point on the map. The website prepares coordinates and a map link to copy or send by SMS. If GPS is denied, enter a town, road, kilometer or landmark."
     ],
     [
       "Is the request sent automatically?",

@@ -1,4 +1,4 @@
-import { serviceImage } from './content/service-media.mjs';
+import { serviceImage, serviceCardTitle } from './content/service-media.mjs';
 import { coverageBoundary } from './content/coverage-area.mjs';
 import { copy, services, regions, locations, faqs, paths, homeMeta } from './content/site-data.mjs';
 
@@ -23,7 +23,7 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   function renderServices() {
     $('#service-grid').innerHTML = services.map(item => {
       const s = serviceData(item.id);
-      return `<article class="service-card ${s.featured ? 'featured' : ''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${s.title}</a></h3><p>${s.short}</p><div class="service-card-bottom"><a href="${s.paths[lang]}">${t('details')}</a><button type="button" class="icon-button" data-service-details="${s.id}" aria-label="${s.title} — ${t('allDetails')}">${icon('up-right')}</button></div></article>`;
+      return `<article class="service-card ${s.featured ? 'featured' : ''}"><div class="service-card-media">${serviceImage(s,lang)}<span class="service-card-top"><span class="service-icon">${icon(s.icon)}</span><span class="service-tag">${t(s.tag)}</span></span></div><h3><a href="${s.paths[lang]}">${serviceCardTitle(s,lang)}</a></h3><p>${s.short}</p><div class="service-card-bottom"><a href="${s.paths[lang]}">${t('cardDetails')}</a><button type="button" class="icon-button" data-service-details="${s.id}" aria-label="${s.title} — ${t('allDetails')}">${icon('up-right')}</button></div></article>`;
     }).join('');
     $('#service-choices').innerHTML = services.map(item => {
       const s = serviceData(item.id);
@@ -243,7 +243,7 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
   }
   function showLocationDialog(point, accuracy) {
     const text = `${t('locationMessage')}\n${coordinates(point)}\n${mapUrl(point)}`;
-    openDialog(`<div class="dialog-location-heading"><span class="dialog-content-icon">${icon('locate')}</span><h2>${t('locationReady')}</h2></div><div class="location-preview-wrap"><div id="location-preview-map" role="region" aria-label="${t('locationMapLabel')}"></div><div class="location-preview-fallback" id="location-preview-fallback" hidden>${icon('pin')}<p>${t('locationMapUnavailable')}</p></div></div><p class="dialog-coordinates"><span>${t('locationCoordinates')}</span><span>${coordinates(point)}</span></p><p class="location-caption">${t('locationApprox')}${Number.isFinite(accuracy) ? `<br>${t('gpsAccuracy')}: ${Math.round(accuracy)} ${t('meters')}.` : ''}</p><div class="dialog-location-actions"><a class="text-button" href="${mapUrl(point)}" target="_blank" rel="noopener">${icon('pin')}${t('viewOnMap')}</a><button type="button" class="text-button" id="copy-location">${icon('copy')}${t('copyLocation')}</button></div><div class="dialog-location-buttons"><a class="button button-yellow" href="${smsUrl(text)}">${icon('message')}${t('sendLocation')}</a><button type="button" class="button button-dark" id="location-for-quote">${t('useForQuote')}${icon('up-right')}</button></div><p class="field-note location-sms-note">${t('locationSmsNote')}</p>`, 'location');
+    openDialog(`<div class="dialog-location-heading"><span class="dialog-content-icon">${icon('locate')}</span><h2>${t('locationReady')}</h2></div><div class="location-preview-wrap"><div id="location-preview-map" role="region" aria-label="${t('locationMapLabel')}"></div><div class="location-preview-fallback" id="location-preview-fallback" hidden>${icon('pin')}<p>${t('locationMapUnavailable')}</p></div></div><p class="dialog-coordinates"><span>${t('locationCoordinates')}</span><span>${coordinates(point)}</span></p>${Number.isFinite(accuracy) ? `<p class="location-caption">${t('gpsAccuracy')}: ${Math.round(accuracy)} ${t('meters')}.</p>` : ''}<div class="dialog-location-actions"><a class="text-button" href="${mapUrl(point)}" target="_blank" rel="noopener">${icon('pin')}${t('viewOnMap')}</a><button type="button" class="text-button" id="copy-location">${icon('copy')}${t('copyLocation')}</button></div><div class="dialog-location-buttons"><a class="button button-yellow" href="${smsUrl(text)}">${icon('message')}${t('sendLocation')}</a><button type="button" class="button button-dark" id="location-for-quote">${t('useForQuote')}${icon('up-right')}</button></div><p class="field-note location-sms-note">${t('locationSmsNote')}</p>`, 'location');
     initializeLocationPreview(point, accuracy);
   }
   function destroyLocationPreview() {

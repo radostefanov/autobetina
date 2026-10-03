@@ -14,7 +14,8 @@ Open [the local website](http://127.0.0.1:4173/). GPS and clipboard features nee
 
 ## Features
 
-- Six service descriptions with matching illustrative photographs, responsive image sizes, detail dialogs and service selection: towing, tire assistance, battery assistance, express visits, fuel delivery, and vehicle recovery / transport.
+- Six services with full-color photo headers, prominent contrasting icon badges and compact labels on phones. Responsive images, detail dialogs and service selection cover towing, tire assistance, battery assistance, express visits, fuel delivery, and vehicle recovery / transport.
+- Section headings omit decorative labels and numbers. The three-step process uses action icons, the consultation prompt is centered, and the hero has a visible “Show your location” button.
 - A searchable directory of 270 areas: four main coverage areas and 266 named villages, hamlets, neighbourhoods, localities, road sections and junctions extracted from the existing map boundary. Search accepts Bulgarian / Latin names and phrases such as “roadside assistance near Razliv”. Place type filters, pagination and shareable search URLs are included.
 - Each area has Bulgarian and English landing pages with a specific title, interactive map point, call actions, nearby places and a quote link that prefills the location. Repeated place names share one page showing all matching map points.
 - Dedicated, linked pages for services, coverage areas, company information, FAQs, and contacts: 282 Bulgarian pages and 282 English equivalents. Page content and navigation are available without JavaScript.
@@ -22,6 +23,7 @@ Open [the local website](http://127.0.0.1:4173/). GPS and clipboard features nee
 - Three-step free quote preparation, input validation, vehicle type, destination, notes, and priority request. The visitor reviews and sends a prepared SMS, or copies the details and calls. Nothing is sent automatically.
 - Location sharing shows a mini map with a pin and GPS accuracy circle, compact coordinates, map / copy actions, and SMS / quote shortcuts. The popup uses nearly the full screen width on phones.
 - Mobile call / location bar, FAQs, downloadable vCard, Bulgarian / English switching, privacy information, structured business metadata, sitemap, and custom favicon.
+- The mobile action bar hides during text entry, keyboard viewport shrinkage, or a visible height of 480 pixels or less. It restores when focus and available space allow, including on the area search pages.
 - Self-hosted fonts, map library, and hero image; the live map tiles are the only third-party runtime dependency.
 - Unique page titles and descriptions, canonical URLs, reciprocal language annotations, breadcrumbs, business / service structured data, and a bilingual XML sitemap. See [SEO.md](SEO.md) for the page structure and indexing notes.
 
@@ -63,6 +65,12 @@ Before publishing, the business should confirm the availability of tire, battery
 Checked in the browser at desktop and mobile sizes: service dialog selection, required fields / invalid phone validation, safely displayed input, map point to SMS transfer, language switching while preserving form state, and absence of horizontal scrolling. SMS links were inspected without sending a message. Actual telephone calls, SMS delivery, and real-device GPS permission / accuracy were not exercised.
 
 Service images and the location popup were checked in Bulgarian and English at desktop, 390-pixel and 320-pixel phone widths. A temporary local fixture with a public sample coordinate verified the location pin, compact coordinates, quote transfer, repeated opening, unavailable-map fallback and denied-GPS fallback.
+
+Service cards use full-color photographs above the text, with opaque charcoal-and-yellow icon badges over the photo. Compact mobile labels link to full service information. The home and English static service cards share the same layout.
+
+The simplified home page was checked on desktop and at 390-pixel / 320-pixel phone widths in Bulgarian and English: section labels / numbers and “All services” links are absent, the consultation heading and link are centered, process icons render, and “Show your location” is a visible button. A temporary local sample-location fixture verified the popup retains its map, coordinates and accuracy without the redundant explanatory sentence.
+
+The mobile action bar was checked at 390 × 844 and 390 × 420: text input / textarea focus hides it, checkbox or filter focus restores it, reduced height hides it, and restored height shows it again. Area search uses the same behavior. These checks used a desktop browser viewport; a physical phone keyboard was not exercised.
 
 The SEO validator checks all 564 generated pages for unique metadata, canonical URLs, reciprocal language links, one H1, schema consistency, duplicate IDs, local assets, internal links / fragments, orphan pages, and static homepage service / FAQ content. Use `python3 tools/check-seo.py --http-origin http://127.0.0.1:4173` while the local preview runs to also verify HTTP responses. Browser checks cover service and region navigation, English equivalents, preselected quote shortcuts, retained form state when changing language, and responsive secondary pages.
 
