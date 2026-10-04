@@ -105,7 +105,6 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
     state.service = services.some(item => item.id === id) ? id : 'tow';
     const radio = $(`input[name="service"][value="${state.service}"]`);
     if (radio) radio.checked = true;
-    $('#request-express').checked = state.service === 'express';
     $('#destination-field').hidden = !['tow', 'recovery'].includes(state.service);
   }
   function goToQuote(id) {
@@ -154,7 +153,6 @@ import { copy, services, regions, locations, faqs, paths, homeMeta } from './con
     const rows = [[t('serviceLabel'), serviceData(state.service).title], [t('locationLabel'), String(form.get('location')).trim()], [t('vehicleLabel'), $('#request-vehicle').selectedOptions[0].textContent], [t('phoneLabel'), String(form.get('phone')).trim()]];
     if (['tow', 'recovery'].includes(state.service) && String(form.get('destination')).trim()) rows.push([t('destinationLabel'), String(form.get('destination')).trim()]);
     if (String(form.get('notes')).trim()) rows.push([t('notesLabel'), String(form.get('notes')).trim()]);
-    if (form.get('express') || state.service === 'express') rows.push([t('expressLabel'), t('expressValue')]);
     return rows;
   }
   function buildSummary() {

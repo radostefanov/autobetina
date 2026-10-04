@@ -1310,7 +1310,7 @@ legend {
   height:13px
 }
 
-#quote-form label:not(.service-choice):not(.express-choice) {
+#quote-form label:not(.service-choice) {
   display:block;
   font-size:11px;
   font-weight:700;
@@ -1369,46 +1369,10 @@ legend {
   gap:13px
 }
 
-.express-choice {
-  display:flex;
-  align-items:flex-start;
-  gap:9px;
-  padding:12px;
-  background:#f5f7f0;
-  border-radius:5px;
-  margin-top:15px;
-  cursor:pointer;
-  font-size:11px
-}
 
-.express-choice input {
-  accent-color:#9d7900;
-  margin-top:4px;
-  width:15px;
-  height:15px;
-  flex-shrink:0
-}
 
-.express-choice strong {
-  display:block;
-  font-size:11px
-}
 
-.express-choice small {
-  display:block;
-  font-size:9px;
-  color:var(--muted);
-  line-height:1.6;
-  margin-top:3px
-}
 
-.express-choice>.icon {
-  width:18px;
-  height:18px;
-  color:#9d7900;
-  flex-shrink:0;
-  margin-left:auto
-}
 
 .form-actions {
   display:flex;
@@ -2528,7 +2492,7 @@ legend {
   .form-progress>span {
     margin-inline:8px
   }
-  #quote-form label:not(.service-choice):not(.express-choice) {
+  #quote-form label:not(.service-choice) {
     font-size:12px
   }
   #quote-form input:not([type=radio]):not([type=checkbox]),#quote-form select,#quote-form textarea {
@@ -2537,12 +2501,6 @@ legend {
   }
   .form-row {
     grid-template-columns:1fr
-  }
-  .express-choice strong {
-    font-size:12px
-  }
-  .express-choice small {
-    font-size:11px
   }
   .form-actions .button {
     font-size:11px;
@@ -2810,7 +2768,7 @@ legend {
   min-height:78px
 }
 
-#quote-form label:not(.service-choice):not(.express-choice) {
+#quote-form label:not(.service-choice) {
   font-size:14px
 }
 
@@ -2818,11 +2776,11 @@ legend {
   font-size:16px
 }
 
-.express-choice strong,.request-summary>div,.review-actions .text-button {
+.request-summary>div,.review-actions .text-button {
   font-size:14px
 }
 
-.express-choice small,.field-note,.form-footer,.no-charge,.form-progress>div,.edit-request,.map-note,.contact-note {
+.field-note,.form-footer,.no-charge,.form-progress>div,.edit-request,.map-note,.contact-note {
   font-size:12px
 }
 

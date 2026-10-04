@@ -20,7 +20,7 @@ Open [the local website](http://127.0.0.1:4173/). GPS and clipboard features nee
 - Each area has Bulgarian and English landing pages with a specific title, interactive map point, call actions, nearby places and a quote link that prefills the location. Repeated place names share one page showing all matching map points.
 - Dedicated, linked pages for services, coverage areas, company information, FAQs, and contacts: 282 Bulgarian pages and 282 English equivalents. Page content and navigation are available without JavaScript.
 - Interactive Leaflet / OpenStreetMap coverage map, town controls, point selection, and GPS location. Arrow keys pan a focused map; Enter selects its center. Town markers represent service areas, not fleet positions or an office address.
-- Three-step free quote preparation, input validation, vehicle type, destination, notes, and priority request. The visitor reviews and sends a prepared SMS, or copies the details and calls. Nothing is sent automatically.
+- Three-step free quote preparation, input validation, vehicle type, destination, and notes. The visitor reviews and sends a prepared SMS, or copies the details and calls. Nothing is sent automatically.
 - Location sharing shows a mini map with a pin and GPS accuracy circle, compact coordinates, map / copy actions, and SMS / quote shortcuts. The popup uses nearly the full screen width on phones.
 - Mobile call / location bar, FAQs, downloadable vCard, Bulgarian / English switching, privacy information, structured business metadata, sitemap, and custom favicon.
 - The mobile action bar hides during text entry, keyboard viewport shrinkage, or a visible height of 480 pixels or less. It restores when focus and available space allow, including on the area search pages.
