@@ -101,7 +101,9 @@ function head(lang, page, homepage=false) {
   <meta name="twitter:title" content="${esc(meta.title)}">
   <meta name="twitter:description" content="${esc(meta.description)}">
   <meta name="twitter:image" content="${origin}/assets/roadside-hero.jpg">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon.png">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/page.css">
   ${homepage ? '<link rel="preload" as="image" href="/assets/roadside-hero.jpg" fetchpriority="high">\n  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">\n  <script defer src="/vendor/leaflet/leaflet.js"></script>\n  <script type="module" src="/app.js"></script>' : (page.region ? '<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">\n  <script defer src="/vendor/leaflet/leaflet.js"></script>\n  ' : '') + '<script defer src="/page.js"></script>'}
